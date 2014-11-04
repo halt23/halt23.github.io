@@ -1,13 +1,16 @@
 ---
 layout: post
-title: "Getting there"
+title: Getting there
 published: true
 ---
 
-<video width="640" height="480" controls="">
+<video id="vid1" width="640" height="480" controls="">
   <source src="http://kaosx.us/media/cala_web.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
+<script>
+  document.getElementById('vid1').currentTime = 50;
+</script> 
 
 Calamares in its current state can already install a Linux operating system (KaOS, Manjaro and Maui are confirmed to work).
 
