@@ -1,8 +1,8 @@
 ---
+layout: post
+title: "Getting there"
 published: true
 ---
-
-## Getting there
 
 <video width="640" height="480" controls="">
   <source src="http://kaosx.us/media/cala_web.webm" type="video/webm">
