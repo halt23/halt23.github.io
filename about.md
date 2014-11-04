@@ -24,6 +24,14 @@ Calamares is maintained by [the Calamares team](/team/). Most of us are also [KD
 We want to provide an end-user product suitable for many distributions and desktop environments, and gladly accept contributions from everyone.
 Therefore, we have no exclusive association with any Linux distribution. Calamares is not a KDE project, or a KaOS project, or a Manjaro project, we are just a bunch of people dumping some code on [GitHub](https://github.com/calamares).
 
+## What is Calamares made of
+
+Calamares is mostly written in C++11, with Qt 5 as general purpose library and UI toolkit.
+Calamares is modular by design, and Python 3 was chosen as the main scripting language to empower distributors in creating a variety of configurable modules  to fit a wide range of use cases.
+The Python 3 interface is implemented with Boost.Python, and all Calamares configuration is done in YAML.
+Aside from the partitioning module, which depends on select few KDE Frameworks, Calamares has no other major dependencies.
+For a complete list of dependencies, see [the README file](https://github.com/calamares/calamares/blob/master/README.md).
+
 ## Contact us
 
 IRC: #calamares on chat.freenode.net.
