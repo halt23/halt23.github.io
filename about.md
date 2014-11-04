@@ -20,7 +20,7 @@ Calamares does not aim to be the ultimate "standard" installer of the Linux desk
 
 ## Who develops Calamares
 
-Calamares is maintained by [the Calamares team](). Most of us are also [KDE](http://kde.org) developers, and we have received contributions from [BBQLinux](http://bbqlinux.org/), [Fedora](https://fedoraproject.org/), [KaOS](http://kaosx.us/), [Kubuntu](http://kubuntu.org), [Manjaro](http://manjaro.org/), [Maui](http://www.maui-project.org/) and [Netrunner](http://www.netrunner-os.com/) developers as well.
+Calamares is maintained by [the Calamares team](team). Most of us are also [KDE](http://kde.org) developers, and we have received contributions from [BBQLinux](http://bbqlinux.org/), [Fedora](https://fedoraproject.org/), [KaOS](http://kaosx.us/), [Kubuntu](http://kubuntu.org), [Manjaro](http://manjaro.org/), [Maui](http://www.maui-project.org/) and [Netrunner](http://www.netrunner-os.com/) developers as well.
 We want to provide an end-user product suitable for many distributions and desktop environments, and gladly accept contributions from everyone.
 Therefore, we have no exclusive association with any Linux distribution. Calamares is not a KDE project, or a KaOS project, or a Manjaro project, we are just a bunch of people dumping some code on [GitHub](https://github.com/calamares).
 
