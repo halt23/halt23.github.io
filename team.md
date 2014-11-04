@@ -8,7 +8,7 @@ published: true
 Calamares is maintained by
 
 [**Teo Mrnjavac**](https://github.com/teo)  
-Lead developer  
+Lead developer | Software craftsman at Blue Systems  
 Other Projects: KDE, Amarok, Tomahawk
 
 Thanks to:
