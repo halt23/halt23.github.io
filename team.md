@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Team
+title: The Calamares team
 permalink: /team/
 published: true
 ---
