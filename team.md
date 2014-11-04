@@ -5,14 +5,12 @@ permalink: /team/
 published: true
 ---
 
-Calamares is maintained by
-
+Calamares is maintained by  
 [**Teo Mrnjavac**](https://github.com/teo)  
 Lead developer | Software craftsman at Blue Systems  
 Other Projects: KDE, Amarok, Tomahawk
 
-Thanks to:
-
+Thanks to:  
 [**Anke Boersma**](https://github.com/demmm)
 Various modules, KaOS support  
 [**Phil Mueller**](https://github.com/philmmanjaro)
@@ -22,10 +20,11 @@ Maui support
 [**Rohan Garg**](https://github.com/shadeslayer)
 Debian support  
 
-Former contributors:
-
+Former contributors:  
 [**Aurélien Gâteau**](https://github.com/agateau)
 Partitioning, job queue
+
+User interface design and artwork is provided by [the KDE Visual Design Group](https://vdesign.kde.org/).
 
 --
 
