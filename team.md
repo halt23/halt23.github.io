@@ -13,18 +13,18 @@ Other Projects: KDE, Amarok, Tomahawk
 
 Thanks to:
 
-**Anke Boersma**
+[**Anke Boersma**](https://github.com/demmm)
 Various modules, KaOS support  
-**Phil Mueller**
+[**Phil Mueller**](https://github.com/philmmanjaro)
 Manjaro support  
-**Pier Luigi Fiorini**
+[**Pier Luigi Fiorini**](https://github.com/plfiorini)
 Maui support  
-**Rohan Garg**
+[**Rohan Garg**](https://github.com/shadeslayer)
 Debian support  
 
 Former contributors:
 
-**Aurélien Gâteau**
+[**Aurélien Gâteau**](https://github.com/agateau)
 Partitioning, job queue
 
 --
