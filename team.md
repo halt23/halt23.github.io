@@ -1,3 +1,10 @@
+---
+layout: page
+title: Team
+permalink: /team/
+published: true
+---
+
 ## Authors
 
 [**Teo Mrnjavac**](https://github.com/teo)  
