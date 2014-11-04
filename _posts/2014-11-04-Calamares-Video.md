@@ -9,7 +9,9 @@ published: true
 Your browser does not support the video tag.
 </video>
 <script>
-  document.getElementById('vid1').currentTime = 50;
+  document.getElementById('vid1').addEventListener('loadedmetadata', function()   {
+    this.currentTime = 40;
+  }, false);
 </script> 
 
 Calamares in its current state can already install a Linux operating system (KaOS, Manjaro and Maui are confirmed to work).
