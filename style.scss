@@ -148,7 +148,7 @@ img {
 
 .wrapper-masthead {
   margin-bottom: 50px;
-  background: #2c2c2c;
+  background: #292F34;
 }
 
 .masthead {
@@ -189,12 +189,18 @@ img {
 
 .site-name {
   margin: 0;
-  color: #fff;
+  color: $white;
   cursor: pointer;
   font-family: $helveticaNeue; 
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
+  a {
+    &:hover, &:active {
+      color: $lightGray;
+      text-decoration: none;
+    }
+  }
 }
 
 .site-description {
@@ -261,6 +267,13 @@ nav {
     font-size: 22px;
     font-style: italic;
   }
+  img {
+    box-shadow: 0 0 20px;
+    -webkit-box-shadow: 0 0 20px;
+    -moz-box-shadow: 0 0 20px;
+    -o-box-shadow: 0 0 20px;
+    -ms-box-shadow: 0 0 20px; 
+  }
 
   .comments {
     margin-top: 10px;
@@ -276,7 +289,7 @@ nav {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: #2c2c2c;
+  background-color: #292F34;
 }
 
 footer {
@@ -286,7 +299,7 @@ footer {
   color: #ccc;
   
   a {
-    margin-left: 20px;
+    margin-left: 10px;
     color: #ccc;
     text-align: right;
     font-weight: 300;
