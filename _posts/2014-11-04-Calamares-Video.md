@@ -5,7 +5,7 @@ published: true
 ---
 
 <video id="vid1" width="640" height="480" controls="">
-  <source src="{{site.url}}/images/cala_web.webm#t=42,100" type="video/webm">
+  <source src="http://kaosx.us/media/cala_web.webm#t=42,100" type="video/webm">
 Your browser does not support the video tag.
 </video>
 
