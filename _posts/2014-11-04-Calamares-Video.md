@@ -11,6 +11,6 @@ Your browser does not support the video tag.
 
 Calamares in its current state can already install a Linux operating system (KaOS, Manjaro and Maui are confirmed to work).
 
-Are you looking for a system installer from your Linux distribution? Grab Calamares, mix and match any number of Calamares modules (or write your own in Python or C++), throw together some branding, package it up and you are ready to ship!
+Are you looking for a system installer for your Linux distribution? Grab Calamares, mix and match any number of Calamares modules (or write your own in Python or C++), throw together some branding, package it up and you are ready to ship!
 
 Look for us in #calamares on chat.freenode.net.
