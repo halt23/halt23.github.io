@@ -13,6 +13,8 @@ Other Projects: KDE, Amarok, Tomahawk
 Thanks to:  
 [**Anke Boersma**](https://github.com/demmm)
 Various modules, KaOS support  
+[**Kevin Kofler**](https://github.com/kkofler)
+Fedora support, miscellanous fixes
 [**Phil Mueller**](https://github.com/philmmanjaro)
 Manjaro support  
 [**Pier Luigi Fiorini**](https://github.com/plfiorini)
