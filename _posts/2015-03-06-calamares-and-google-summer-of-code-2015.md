@@ -1,8 +1,8 @@
 ---
-published: false
+published: true
+layout: post
+title: Calamares and Google Summer of Code 2015
 ---
-
-## Calamares and Google Summer of Code 2015
 
 [KDE](http://kde.org) has been [accepted](https://www.google-melange.com/gsoc/org2/google/gsoc2015/kde) as a mentoring organization for Google Summer of Code 2015, and the KDE Student Programs team has kindly granted Calamares the opportunity to participate under the KDE umbrella.
 
