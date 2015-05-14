@@ -33,10 +33,12 @@ We gladly accept contributions from everyone, and we have no exclusive associati
 Many Linux distributions are in varying stages of adopting Calamares as their primary system installer.
 
 Operating systems that already ship Calamares:
+
 - [BBQLinux](http://bbqlinux.org/)
 - [KaOS](http://kaosx.us/)
 
 Operating systems that are evaluating Calamares in pre-release builds:
+
 - [Fedora](https://fedoraproject.org/) (KDE remix)
 - [Manjaro](http://manjaro.org/)
 - [Maui](http://www.maui-project.org/)
