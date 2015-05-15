@@ -24,7 +24,7 @@ Calamares does not aim to be the ultimate "standard" installer of the Linux desk
 
 ## Who develops Calamares
 
-Calamares is maintained by [the Calamares team]({{ site.url }}/team/). Most of us are also [KDE](http://kde.org) developers, and we have received contributions from [BBQLinux](http://bbqlinux.org/), [Fedora](https://fedoraproject.org/), [KaOS](http://kaosx.us/), [Kubuntu](http://kubuntu.org), [Manjaro](http://manjaro.org/), [Maui](http://www.maui-project.org/), [Netrunner](http://www.netrunner-os.com/) and [OpenMandriva](https://www.openmandriva.org/) developers as well.
+Calamares is maintained by [the Calamares team]({{ site.url }}/team/). Most of us are also [KDE](http://kde.org) developers, and we have received contributions from [BBQLinux](http://bbqlinux.org/), [Fedora](https://fedoraproject.org/), [KaOS](http://kaosx.us/), [Kubuntu](http://kubuntu.org), [Manjaro](http://manjaro.org/), [Maui](http://www.maui-project.org/), [Netrunner](http://www.netrunner.com/) and [OpenMandriva](https://www.openmandriva.org/) developers as well.
 
 We gladly accept contributions from everyone, and we have no exclusive association with any Linux distribution. Calamares is not a KDE project, or a KaOS project, or a Manjaro project, we are just a bunch of people dumping some code on [GitHub](https://github.com/calamares).
 
@@ -42,7 +42,7 @@ Operating systems that are evaluating Calamares in pre-release builds:
 - [Fedora](https://fedoraproject.org/) (KDE remix)
 - [Manjaro](http://manjaro.org/)
 - [Maui](http://www.maui-project.org/)
-- [Netrunner](http://www.netrunner-os.com/)
+- [Netrunner](http://www.netrunner.com/)
 - [OpenMandriva](https://www.openmandriva.org/)
 - [Tanglu](http://tanglu.org/)
 
