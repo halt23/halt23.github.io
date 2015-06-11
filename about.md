@@ -7,6 +7,7 @@ published: true
 
 
 
+
 The idea of Calamares arose from a desire of several independent Linux distributions to come together and work on a shared system installer. Instead of everyone working on their own implementation and forking forks of forks, why not work together on something that can be used by many?
 
 ## What is Calamares
@@ -37,6 +38,7 @@ Operating systems that already ship Calamares:
 
 - [BBQLinux](http://bbqlinux.org/)
 - [KaOS](http://kaosx.us/)
+- [OpenMamba](http://openmamba.org/en/)
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
