@@ -6,6 +6,7 @@ published: true
 ---
 
 
+
 The idea of Calamares arose from a desire of several independent Linux distributions to come together and work on a shared system installer. Instead of everyone working on their own implementation and forking forks of forks, why not work together on something that can be used by many?
 
 ## What is Calamares
@@ -40,10 +41,13 @@ Operating systems that already ship Calamares:
 Operating systems that are evaluating Calamares in pre-release builds:
 
 - [Fedora](https://fedoraproject.org/) (KDE remix)
+- [Kogaion](http://rogentos.ro/)
 - [Manjaro](http://manjaro.org/)
 - [Maui](http://www.maui-project.org/)
 - [Netrunner](http://www.netrunner.com/)
 - [OpenMandriva](https://www.openmandriva.org/)
+- [PCLinuxOS](http://www.pclinuxos.com/)
+- [Sabayon](https://www.sabayon.org/)
 - [Tanglu](http://tanglu.org/)
 
 ## What is Calamares made of
