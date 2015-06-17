@@ -5,12 +5,10 @@ permalink: /team/
 published: true
 ---
 
-Calamares is maintained by  
-[**Teo Mrnjavac**](https://github.com/teo)  
-Lead developer | Software craftsman at Blue Systems  
-Other Projects: KDE, Amarok, Tomahawk
 
-Thanks to:  
+[**Teo Mrnjavac**](https://github.com/teo)  
+Maintainer | Software developer at Blue Systems  
+
 [**Anke Boersma**](https://github.com/demmm)
 Various modules, KaOS support  
 [**Kevin Kofler**](https://github.com/kkofler)
