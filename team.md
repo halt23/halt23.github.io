@@ -26,7 +26,7 @@ Partitioning, job queue
 
 User interface design and artwork is provided by [the KDE Visual Design Group](https://vdesign.kde.org/).
 
-_Find us on [GitHub](https://github.com/calamares/calamares/graphs/contributors)_
+**Find us on [GitHub](https://github.com/calamares/calamares/graphs/contributors)**
 
 --
 
