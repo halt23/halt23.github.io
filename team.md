@@ -24,6 +24,8 @@ Former contributors:
 [**Aurélien Gâteau**](https://github.com/agateau)
 Partitioning, job queue
 
+Find us on [GitHub](https://github.com/calamares/calamares/graphs/contributors).
+
 User interface design and artwork is provided by [the KDE Visual Design Group](https://vdesign.kde.org/).
 
 --
