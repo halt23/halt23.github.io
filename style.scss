@@ -192,8 +192,8 @@ img {
   color: $white;
   cursor: pointer;
   font-family: $helveticaNeue; 
-  font-weight: 300;
-  font-size: 28px;
+  font-weight: 700;
+  font-size: 34px;
   letter-spacing: 1px;
   a {
     &:hover, &:active {
@@ -227,7 +227,7 @@ nav {
   }
 
   a {
-    margin-left: 20px;
+    margin-left: 10px;
     color: #ccc;
     text-align: right;
     font-weight: 300;
