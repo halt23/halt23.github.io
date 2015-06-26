@@ -12,6 +12,9 @@ published: true
       <div class="entry">
         {% if post.content contains '<!--more-->' %}
           {{ post.content | split:'<!--more-->' | first }}
+        {% else %}
+          {{ post.excerpt }}
+        {% endif %}
         <div class="date">
     		Written on {{ post.date | date: "%B %e, %Y" }}
   		  </div>
