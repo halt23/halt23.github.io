@@ -13,6 +13,8 @@ Calamares is an installer framework. By design it is very customizable, in order
 
 Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic.
 
+Calamares includes an advanced partitioning system, with support for both manual partitioning operations and automated operations such as replacing an existing operating system in-place.
+
 Got a Linux distribution but no system installer? [Grab Calamares](https://github.com/calamares/calamares), mix and match any number of [Calamares modules](https://github.com/calamares/calamares/tree/master/src/modules) (or write your own in Python or C++), throw together some [branding](https://github.com/calamares/calamares/tree/master/src/branding), package it up and you are ready to ship!
 
 ## What Calamares is not
