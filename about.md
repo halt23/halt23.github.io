@@ -37,13 +37,13 @@ Operating systems that already ship Calamares:
 
 - [BBQLinux](http://bbqlinux.org/)
 - [KaOS](http://kaosx.us/)
+- [Kogaion](http://rogentos.ro/)
 - [OpenMamba](http://openmamba.org/en/)
 - [Tanglu](http://tanglu.org/)
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
 - [Fedora](https://fedoraproject.org/) (KDE remix)
-- [Kogaion](http://rogentos.ro/)
 - [Manjaro](http://manjaro.org/)
 - [Maui](http://www.maui-project.org/)
 - [Netrunner](http://www.netrunner.com/)
