@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Important e2fsprogs issue discovered"
 ---
