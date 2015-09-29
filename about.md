@@ -39,6 +39,7 @@ Operating systems that already ship Calamares:
 - [KaOS](http://kaosx.us/)
 - [Kogaion](http://rogentos.ro/)
 - [OpenMamba](http://openmamba.org/en/)
+- [Sabayon](https://www.sabayon.org/)
 - [Tanglu](http://tanglu.org/)
 
 Operating systems that are evaluating Calamares in pre-release builds:
@@ -49,7 +50,6 @@ Operating systems that are evaluating Calamares in pre-release builds:
 - [Netrunner](http://www.netrunner.com/)
 - [OpenMandriva](https://www.openmandriva.org/)
 - [PCLinuxOS](http://www.pclinuxos.com/)
-- [Sabayon](https://www.sabayon.org/)
 
 ## What is Calamares made of
 
