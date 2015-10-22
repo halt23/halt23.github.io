@@ -4,7 +4,7 @@ yaourt -Sy --noconfirm cmake extra-cmake-modules boost
 
 git clone https://github.com/calamares/calamares.git
 cd calamares
-git checkout --track origin/1.1.x-stable -b 1.1.x-stable
+git checkout --track origin/choicepreview -b choicepreview
 git submodule init
 git submodule update
 mkdir build
