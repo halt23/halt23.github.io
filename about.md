@@ -36,6 +36,7 @@ Many Linux distributions are in varying stages of adopting Calamares as their pr
 Operating systems that already ship Calamares:
 
 - [BBQLinux](http://bbqlinux.org/)
+- [Chakra](https://chakraos.org/)
 - [KaOS](http://kaosx.us/)
 - [Kogaion](http://rogentos.ro/)
 - [Manjaro](http://manjaro.org/)
