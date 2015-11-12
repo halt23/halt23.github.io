@@ -87,9 +87,9 @@ def yaourt_update(noupgrade):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("branch", nargs="?", default="master",
-                        help="Branch to build.")
-    parser.add_argument("--noupgrade", aliases=["-n"], action="store_true", dest="noupgrade",
-                        help="Do not upgrade all the packages on the system before building.")
+                        help="the branch to checkout and build")
+    parser.add_argument("-n", "--noupgrade", action="store_true", dest="noupgrade",
+                        help="do not upgrade all the packages on the system before building")
     parser.add_argument("--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
