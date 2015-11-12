@@ -76,15 +76,20 @@ def update_self():
     os.execv(sys.executable, myargs)
 
 
-def yaourt_update():
+def yaourt_update(noupgrade):
     packages = ["cmake", "extra-cmake-modules", "boost"]
-    os.system("yaourt -Syu --noconfirm --needed " + " ".join(packages))
+    if noupgrade:
+        os.system("yaourt -Sy --noconfirm --needed " + " ".join(packages))
+    else:
+        os.system("yaourt -Syu --noconfirm --needed " + " ".join(packages))
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("branch", nargs="?", default="master",
                         help="Branch to build.")
+    parser.add_argument("--noupgrade", aliases=["-n"], action="store_true", dest="noupgrade",
+                        help="Do not upgrade all the packages on the system before building.")
     parser.add_argument("--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
@@ -99,7 +104,7 @@ def main():
 
     message("Updating build dependencies...")
     if shutil.which("yaourt"):
-        yaourt_update()
+        yaourt_update(args.noupgrade)
     else:
         bail("no package manager found.")
 
