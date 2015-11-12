@@ -61,6 +61,22 @@ def bail(msg):
     sys.exit(1)
 
 
+def update_self():
+    message("Updating deployment script...")
+    thisfile = os.path.realpath(__file__)
+    os.system("curl -o " + thisfile + " -L https://calamares.io/deploycala.py")
+    os.system("chmod +x " + thisfile)
+
+    myargs = sys.argv[:]
+    message('Update complete, restarting %s' % ' '.join(myargs))
+
+    myargs.insert(0, sys.executable)
+    myargs.append('--noupdate')
+
+    os.chdir(_startup_cwd)
+    os.execv(sys.executable, myargs)
+
+
 def yaourt_update():
     packages = ["cmake", "extra-cmake-modules", "boost"]
     os.system("yaourt -Syu --noconfirm --needed " + " ".join(packages))
@@ -70,7 +86,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("branch", nargs="?", default="master",
                         help="Branch to build.")
+    parser.add_argument("--noupdate", dest="noupdate", help=argparse.SUPPRESS)
     args = parser.parse_args()
+
+    if not args.noupdate:
+        update_self()
 
     cwd = os.getcwd()
 
