@@ -73,7 +73,6 @@ def update_self():
     myargs.insert(0, sys.executable)
     myargs.append('--noupdate')
 
-    os.chdir(_startup_cwd)
     os.execv(sys.executable, myargs)
 
 
