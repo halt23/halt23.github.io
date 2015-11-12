@@ -167,9 +167,9 @@ def main():
     if not cpu_count > 0:
         cpu_count = 4
 
-    message("Found " + cpu_count + " CPU cores, building...")
+    message("Found " + str(cpu_count) + " CPU cores, building...")
     os.system("cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PARTITIONMANAGER=1 .. && " +
-              "make -j" + cpu_count + " && " +
+              "make -j" + str(cpu_count) + " && " +
               "sudo make install")
     os.chdir(cwd)
 
