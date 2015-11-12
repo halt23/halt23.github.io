@@ -84,6 +84,37 @@ def yaourt_update(noupgrade):
         os.system("yaourt -Syu --noconfirm --needed " + " ".join(packages))
 
 
+# Courtesy of phihag on Stack Overflow,
+# http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
+def available_cpu_count():
+    # Python 3.4+
+    try:
+        import multiprocessing
+        return multiprocessing.cpu_count()
+    except (ImportError, NotImplementedError):
+        pass
+
+    # POSIX
+    try:
+        res = int(os.sysconf('SC_NPROCESSORS_ONLN'))
+
+        if res > 0:
+            return res
+    except (AttributeError, ValueError):
+        pass
+
+    # Linux
+    try:
+        res = open('/proc/cpuinfo').read().count('processor\t:')
+
+        if res > 0:
+            return res
+    except IOError:
+        pass
+
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("branch", nargs="?", default="master",
@@ -130,11 +161,15 @@ def main():
         os.system("git submodule update")
         os.system("git submodule sync")
 
-    message("Building...")
     os.mkdir("build")
     os.chdir("build")
+    cpu_count = available_cpu_count()
+    if not cpu_count > 0:
+        cpu_count = 4
+
+    message("Found " + cpu_count + " CPU cores, building...")
     os.system("cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PARTITIONMANAGER=1 .. && " +
-              "make -j4 && " +
+              "make -j" + cpu_count + " && " +
               "sudo make install")
     os.chdir(cwd)
 
