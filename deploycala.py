@@ -130,7 +130,11 @@ def main():
     cwd = os.getcwd()
 
     message("Backing up Calamares configuration and resources...")
+    if os.path.isdir("/usr/share/calamares.backup"):
+        os.system("sudo rm -rf /usr/share/calamares.backup")
     os.system("sudo cp -R /usr/share/calamares /usr/share/calamares.backup")
+    if os.path.isdir("/etc/calamares.backup"):
+        os.system("sudo rm -rf /etc/calamares.backup")
     os.system("sudo cp -R /etc/calamares /etc/calamares.backup")
 
     message("Updating build dependencies...")
