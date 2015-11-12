@@ -85,7 +85,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("branch", nargs="?", default="master",
                         help="Branch to build.")
-    parser.add_argument("--noupdate", nargs="?", dest="noupdate", help=argparse.SUPPRESS)
+    parser.add_argument("--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
     if not args.noupdate:
