@@ -12,13 +12,13 @@ if [ -z "$1" ]; then
     BRANCH=master
 fi
 
-if [ -d calamares ]
+if [ -d calamares ]; then
     cd calamares
     git checkout --track origin/$BRANCH -b $BRANCH
     git pull --rebase
     git submodule update
     git submodule sync
-    if [ -d build ]
+    if [ -d build ]; then
         rm -rf build
     fi
 else
