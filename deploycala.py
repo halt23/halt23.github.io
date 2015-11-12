@@ -84,6 +84,14 @@ def yaourt_update(noupgrade):
         os.system("yaourt -Syu --noconfirm --needed " + " ".join(packages))
 
 
+def pacman_update(noupgrade):
+    packages = ["cmake", "extra-cmake-modules", "boost"]
+    if noupgrade:
+        os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
+    else:
+        os.system("sudo pacman -Syu --noconfirm --needed " + " ".join(packages))
+
+
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
 def available_cpu_count():
@@ -140,6 +148,8 @@ def main():
     message("Updating build dependencies...")
     if shutil.which("yaourt"):
         yaourt_update(args.noupgrade)
+    elif shutil.which("pacman"):
+        pacman_update(args.noupgrade)
     else:
         bail("no package manager found.")
 
