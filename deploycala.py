@@ -77,7 +77,7 @@ def update_self():
 
 
 def yaourt_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "kpmcore-git"]
     if noupgrade:
         os.system("yaourt -Sy --noconfirm --needed " + " ".join(packages))
     else:
@@ -85,7 +85,7 @@ def yaourt_update(noupgrade):
 
 
 def pacman_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts"]
     if noupgrade:
         os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
     else:
