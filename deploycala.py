@@ -79,17 +79,17 @@ def update_self():
 def yaourt_update(noupgrade):
     packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "kpmcore-git"]
     if noupgrade:
-        os.system("yaourt -Sy --noconfirm --needed " + " ".join(packages))
+        os.system("yaourt -Sy --noconfirm --needed --force " + " ".join(packages))
     else:
-        os.system("yaourt -Syu --noconfirm --needed " + " ".join(packages))
+        os.system("yaourt -Syu --noconfirm --needed --force " + " ".join(packages))
 
 
 def pacman_update(noupgrade):
     packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts"]
     if noupgrade:
-        os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
+        os.system("sudo pacman -Sy --noconfirm --needed --force " + " ".join(packages))
     else:
-        os.system("sudo pacman -Syu --noconfirm --needed " + " ".join(packages))
+        os.system("sudo pacman -Syu --noconfirm --needed --force " + " ".join(packages))
 
 
 # Courtesy of phihag on Stack Overflow,
@@ -196,4 +196,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-
