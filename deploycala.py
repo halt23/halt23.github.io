@@ -77,7 +77,7 @@ def update_self():
 
 
 def yaourt_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "kpmcore-git"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts"]
     if noupgrade:
         os.system("yaourt -Sy --noconfirm --needed --force " + " ".join(packages))
     else:
