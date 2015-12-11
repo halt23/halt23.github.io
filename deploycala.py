@@ -129,6 +129,8 @@ def main():
                         help="the branch to checkout and build")
     parser.add_argument("-n", "--noupgrade", action="store_true", dest="noupgrade",
                         help="do not upgrade all the packages on the system before building")
+    parser.add_argument("-i", "--incremental", action="store_true", dest="incremental",
+                        help="do incremental builds, i.e. don't clear the build directory before building, if found")
     parser.add_argument("--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
@@ -164,8 +166,10 @@ def main():
         os.system("git pull --rebase")
         os.system("git submodule update")
         os.system("git submodule sync")
-        if os.path.isdir("build"):
+        if os.path.isdir("build") and not args.incremental:
             shutil.rmtree("build", ignore_errors=True)
+            os.mkdir("build")
+
     else:
         message("Cloning and checking out " + branch + " branch...")
         os.system("git clone https://github.com/calamares/calamares.git")
@@ -174,8 +178,8 @@ def main():
         os.system("git submodule init")
         os.system("git submodule update")
         os.system("git submodule sync")
+        os.mkdir("build")
 
-    os.mkdir("build")
     os.chdir("build")
     cpu_count = available_cpu_count()
     if not cpu_count > 0:
