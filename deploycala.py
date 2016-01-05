@@ -190,7 +190,11 @@ def main():
         os.system("sudo rm -rf /etc/calamares.backup")
     os.system("sudo cp -R /etc/calamares /etc/calamares.backup")
 
-    message("Updating build dependencies...")
+    if args.noupgrade:
+        message("Updating build dependencies but skipping full upgrade...")
+    else:
+        message("Updating build dependencies and performing full system upgrade...")
+
     if shutil.which("yaourt"):
         yaourt_update(args.noupgrade)
     elif shutil.which("pacman"):
