@@ -55,6 +55,8 @@ def printout(text, colour=WHITE):
 def message(msg):
     sys.stdout.write(printout("==> ", GREEN) + printout(msg, WHITE) + "\n")
 
+def warning(msg):
+    sys.stdout.write(printout("==> ", YELLOW) + printout("Warning: " + msg, WHITE) + "\n")
 
 def bail(msg):
     sys.stdout.write(printout("==> ", RED) + printout("Fatal error: " + msg + "\n", WHITE))
@@ -114,7 +116,12 @@ def inplace_change(filename, old_string, new_string):
 
 def get_file_if_not_exists(source, target):
     if not os.path.exists(target):
-        os.system("curl --create-dirs -o " + target + " -L " + source)
+        if os.system("curl --create-dirs -o " + target + " -L " + source) == 0:
+            message('Fetched "{target}".')
+        else:
+            warning('cannot fetch "{target}."')
+    else:
+        message('File "{target}" already exists, won\'t update.')
 
 def setup_qtcreator():
     os.chdir(os.path.expanduser('~'))
