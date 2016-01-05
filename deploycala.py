@@ -147,6 +147,8 @@ def main():
     if not args.noupdate:
         update_self()
 
+    setup_sudo_gdb()
+
     cwd = os.getcwd()
 
     message("Backing up Calamares configuration and resources...")
