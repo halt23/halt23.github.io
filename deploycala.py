@@ -133,7 +133,7 @@ def setup_qtcreator():
 
     for src, dest in getfiles.items():
         get_file_if_not_exists(src, dest)
-        inplace_change(dest,"/home/netrunner", os.path.expanduser('~'))
+        inplace_change(dest, "/home/netrunner", os.path.expanduser('~'))
 
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
