@@ -114,7 +114,7 @@ def inplace_change(filename, old_string, new_string):
 
 def get_file_if_not_exists(source, target):
     if not os.path.exists(target):
-        os.system("curl -o " + target + " -L " + source)
+        os.system("curl --create-dirs -o " + target + " -L " + source)
 
 def setup_qtcreator():
     os.chdir(os.path.expanduser('~'))
