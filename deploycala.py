@@ -122,7 +122,7 @@ def setup_qtcreator():
     (prefix + 'debuggers.xml', '~/.config/QtProject/qtcreator/debuggers.xml'),
     (prefix + 'QtCreator.ini', '~/.config/QtProject/QtCreator.ini')])
 
-    for src, dest in getfiles:
+    for src, dest in getfiles.items():
         get_file_if_not_exists(src, dest)
         inplace_change(dest,"/home/netrunner", os.path.expanduser('~'))
 
