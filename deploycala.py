@@ -77,7 +77,7 @@ def update_self():
 
 
 def yaourt_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
     if shutil.which( "pacman-mirrors" ):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
@@ -87,7 +87,7 @@ def yaourt_update(noupgrade):
 
 
 def pacman_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
     if shutil.which( "pacman-mirrors" ):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
@@ -101,6 +101,30 @@ def setup_sudo_gdb():
     file = open('/usr/bin/sudo-gdb','w+')
     file.write('#!/bin/bash\nsudo gdb $@\n')
     file.close()
+
+def inplace_change(filename, old_string, new_string):
+    s=open(filename).read()
+    if old_string in s:
+            s=s.replace(old_string, new_string)
+            f=open(filename, 'w')
+            f.write(s)
+            f.flush()
+            f.close()
+
+def get_file_if_not_exists(source, target):
+    if not os.path.exists(target):
+        os.system("curl -o " + target + " -L " + source)
+
+def setup_qtcreator():
+    prefix = 'https://calamares.io/deploycala.d/'
+    getfiles = dict([
+    (prefix + 'CMakeLists.txt.user', '~/calamares/CMakeLists.txt.user'),
+    (prefix + 'debuggers.xml', '~/.config/QtProject/qtcreator/debuggers.xml'),
+    (prefix + 'QtCreator.ini', '~/.config/QtProject/QtCreator.ini')])
+
+    for src, dest in getfiles:
+        get_file_if_not_exists(src, dest)
+        inplace_change(dest,"/home/netrunner", os.path.expanduser('~'))
 
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
@@ -146,8 +170,6 @@ def main():
 
     if not args.noupdate:
         update_self()
-
-    setup_sudo_gdb()
 
     cwd = os.getcwd()
 
@@ -206,6 +228,12 @@ def main():
     message("Restoring Calamares configuration and resources...")
     os.system("sudo cp -R /usr/share/calamares.backup/* /usr/share/calamares/")
     os.system("sudo cp -R /etc/calamares.backup/* /etc/calamares/")
+
+    message("Setting up sudo-gdb...")
+    setup_sudo_gdb()
+
+    message("Setting up QtCreator configuration...")
+    setup_qtcreator()
 
     message("All done.")
 
