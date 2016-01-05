@@ -227,6 +227,11 @@ def main():
         os.system("git submodule sync")
         os.mkdir("build")
 
+    if args.incremental:
+        message("Will do an incremental build if a previous build exists.")
+    else:
+        message("Will do a clean build even if a previous build exists.")
+
     os.chdir("build")
     cpu_count = available_cpu_count()
     if not cpu_count > 0:
