@@ -117,11 +117,12 @@ def get_file_if_not_exists(source, target):
         os.system("curl -o " + target + " -L " + source)
 
 def setup_qtcreator():
+    os.chdir(os.path.expanduser('~'))
     prefix = 'https://calamares.io/deploycala.d/'
     getfiles = dict([
-    (prefix + 'CMakeLists.txt.user', '~/calamares/CMakeLists.txt.user'),
-    (prefix + 'debuggers.xml', '~/.config/QtProject/qtcreator/debuggers.xml'),
-    (prefix + 'QtCreator.ini', '~/.config/QtProject/QtCreator.ini')])
+    (prefix + 'CMakeLists.txt.user', 'calamares/CMakeLists.txt.user'),
+    (prefix + 'debuggers.xml', '.config/QtProject/qtcreator/debuggers.xml'),
+    (prefix + 'QtCreator.ini', '.config/QtProject/QtCreator.ini')])
 
     for src, dest in getfiles.items():
         get_file_if_not_exists(src, dest)
