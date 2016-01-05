@@ -117,11 +117,11 @@ def inplace_change(filename, old_string, new_string):
 def get_file_if_not_exists(source, target):
     if not os.path.exists(target):
         if os.system("curl --create-dirs -o " + target + " -L " + source) == 0:
-            message('Fetched "{target}".')
+            message('Fetched ' + target)
         else:
-            warning('cannot fetch "{target}."')
+            warning('cannot fetch ' + target)
     else:
-        message('File "{target}" already exists, won\'t update.')
+        message('File ' + target + ' already exists, won\'t update.')
 
 def setup_qtcreator():
     os.chdir(os.path.expanduser('~'))
