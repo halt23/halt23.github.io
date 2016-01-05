@@ -103,13 +103,14 @@ def setup_sudo_gdb():
     file.close()
 
 def inplace_change(filename, old_string, new_string):
-    s=open(filename).read()
-    if old_string in s:
-            s=s.replace(old_string, new_string)
-            f=open(filename, 'w')
-            f.write(s)
-            f.flush()
-            f.close()
+    if os.path.exists(filename):
+        s=open(filename).read()
+        if old_string in s:
+                s=s.replace(old_string, new_string)
+                f=open(filename, 'w')
+                f.write(s)
+                f.flush()
+                f.close()
 
 def get_file_if_not_exists(source, target):
     if not os.path.exists(target):
