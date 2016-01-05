@@ -77,7 +77,7 @@ def update_self():
 
 
 def yaourt_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator"]
     if shutil.which( "pacman-mirrors" ):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
@@ -87,7 +87,7 @@ def yaourt_update(noupgrade):
 
 
 def pacman_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator"]
     if shutil.which( "pacman-mirrors" ):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
@@ -95,6 +95,12 @@ def pacman_update(noupgrade):
     else:
         os.system("sudo pacman -Syu --noconfirm --needed --force " + " ".join(packages))
 
+def setup_sudo_gdb():
+    os.system("sudo touch /usr/bin/sudo-gdb")
+    os.system("sudo chmod a+rwx /usr/bin/sudo-gdb")
+    file = open('/usr/bin/sudo-gdb','w+')
+    file.write('#!/bin/bash\nsudo gdb $@\n')
+    file.close()
 
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
