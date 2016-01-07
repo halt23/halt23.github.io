@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProfiles>
-<!-- Written by QtCreator 3.6.0, 2016-01-07T12:30:49. -->
+<!-- Written by QtCreator 3.6.0, 2016-01-07T12:54:14. -->
 <qtcreator>
  <data>
   <variable>Profile.0</variable>
@@ -9,13 +9,13 @@
    <value type="QString" key="PE.Profile.AutoDetectionSource"></value>
    <valuemap type="QVariantMap" key="PE.Profile.Data">
     <value type="QString" key="Android.GdbServer.Information"></value>
-    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{c2f5de26-23c8-4ff2-b467-4dc48cf7579c}</value>
+    <value type="QString" key="CMakeProjectManager.CMakeKitInformation">{b2c1a037-d04a-4c7c-8a4c-ad05505fc1b8}</value>
     <value type="QString" key="Debugger.Information">{13117eda-9d81-48fd-9df5-b912fab8a38f}</value>
     <value type="QString" key="PE.Profile.Device">Desktop Device</value>
     <value type="QByteArray" key="PE.Profile.DeviceType">Desktop</value>
     <valuelist type="QVariantList" key="PE.Profile.Environment"/>
     <value type="QString" key="PE.Profile.SysRoot"></value>
-    <value type="QByteArray" key="PE.Profile.ToolChain">{7a433306-275b-438f-9f61-3f0a9b97d29f}</value>
+    <value type="QString" key="PE.Profile.ToolChain">{bd481f32-5af4-4a24-a353-f4d66c32741d}</value>
     <value type="QString" key="QtPM4.mkSpecInformation"></value>
     <value type="int" key="QtSupport.QtInformation">2</value>
    </valuemap>
