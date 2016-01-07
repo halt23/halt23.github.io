@@ -129,7 +129,9 @@ def setup_qtcreator():
     getfiles = dict([
     (prefix + 'CMakeLists.txt.user', 'calamares/CMakeLists.txt.user'),
     (prefix + 'debuggers.xml', '.config/QtProject/qtcreator/debuggers.xml'),
-    (prefix + 'QtCreator.ini', '.config/QtProject/QtCreator.ini')])
+    (prefix + 'QtCreator.ini', '.config/QtProject/QtCreator.ini'),
+    (prefix + 'default.qws', '.config/QtProject/qtcreator/default.qws'),
+    (prefix + 'profiles.xml', '.config/QtProject/qtcreator/profiles.xml')])
 
     for src, dest in getfiles.items():
         get_file_if_not_exists(src, dest)
