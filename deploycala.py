@@ -215,6 +215,7 @@ def main():
         message("Clone found, checking out " + branch + " branch...")
         os.chdir("calamares")
         os.system("git checkout --track origin/" + branch + " -b " + branch)
+        os.system("git checkout " + branch)
         os.system("git pull --rebase")
         os.system("git submodule update")
         os.system("git submodule sync")
