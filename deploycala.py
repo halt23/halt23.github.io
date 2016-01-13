@@ -22,6 +22,7 @@ import argparse
 import os
 import sys
 import shutil
+import subprocess
 
 
 BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE = range(8)
@@ -258,7 +259,12 @@ def main():
     setup_qtcreator()
 
     message("All done.")
-
+    os.chdir(cwd)
+    os.chdir("calamares")
+    message("Calamares branch " +
+    subprocess.check_output(["git", "symbolic-ref", "--short", "HEAD"]).strip() +
+    "is at commit\n\t" +
+    subprocess.check_output(["git", "log", "-1", "--oneline"]).strip())
 
 if __name__ == "__main__":
     sys.exit(main())
