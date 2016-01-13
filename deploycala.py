@@ -262,9 +262,9 @@ def main():
     os.chdir(cwd)
     os.chdir("calamares")
     message("Calamares branch " +
-    str(subprocess.check_output(["git", "symbolic-ref", "--short", "HEAD"]).strip())[1:] +
+    str(subprocess.check_output(["git", "symbolic-ref", "--short", "HEAD"]).strip())[1:].strip("'") +
     " is at commit\n    " +
-    str(subprocess.check_output(["git", "log", "-1", "--oneline"]).strip()))
+    str(subprocess.check_output(["git", "log", "-1", "--oneline"]).strip())[1:].strip("'"))
 
 if __name__ == "__main__":
     sys.exit(main())
