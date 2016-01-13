@@ -264,7 +264,7 @@ def main():
     os.chdir("calamares")
     message("Calamares branch " +
     printout(str(subprocess.check_output(["git", "symbolic-ref", "--short", "HEAD"]).strip())[1:].strip("'"), YELLOW) +
-    " is at commit\n    " +
+    printout(" is at commit\n    ", WHITE) +
     str(subprocess.check_output(["git", "log", "-1", "--oneline"]).strip())[1:].strip("'"))
 
 if __name__ == "__main__":
