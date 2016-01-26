@@ -80,8 +80,8 @@ def update_self():
 
 
 def yaourt_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
-    if shutil.which( "pacman-mirrors" ):
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "icecream"]
+    if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
         os.system("yaourt -Sy --noconfirm --needed --force " + " ".join(packages))
@@ -90,8 +90,8 @@ def yaourt_update(noupgrade):
 
 
 def pacman_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
-    if shutil.which( "pacman-mirrors" ):
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "icecream"]
+    if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
         os.system("sudo pacman -Sy --noconfirm --needed --force " + " ".join(packages))
@@ -139,6 +139,12 @@ def setup_qtcreator():
     for src, dest in getfiles.items():
         get_file_if_not_exists(src, dest)
         inplace_change(dest, "/home/netrunner", os.path.expanduser('~'))
+
+def setup_icecream():
+    os.system('bash -c \'echo "export PATH=/usr/lib/icecream/libexec/icecc/bin:$PATH" >> ~/.bashrc\'')
+    os.system('bash -c \'source ~/.bashrc\'')
+    os.system('sudo systemctl enable icecream.service')
+    os.system('sudo systemctl start icecream.service')
 
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
@@ -206,6 +212,9 @@ def main():
         pacman_update(args.noupgrade)
     else:
         bail("no package manager found.")
+
+    message("Setting up icecream...")
+    setup_icecream()
 
     branch = args.branch;
     if not branch:
