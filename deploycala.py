@@ -150,7 +150,10 @@ def setup_icecream():
     os.system('sudo systemctl start icecream.service')
     path = os.environ["PATH"]
     os.environ["PATH"] = "/usr/lib/icecream/libexec/icecc/bin:" + path
+    os.system('which gcc')
     os.system('which g++')
+    has_icecream = "icecream" in subprocess.check_output(["which", "g++"]).strip()
+    return has_icecream
 
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
@@ -212,12 +215,13 @@ def main():
     else:
         message("Updating build dependencies and performing full system upgrade...")
 
+    has_icecream = False
     if shutil.which("yaourt"):
         message("\tusing yaourt.")
         yaourt_update(args.noupgrade)
 
         message("Setting up icecream...")
-        setup_icecream()
+        has_icecream = setup_icecream()
     elif shutil.which("pacman"):
         pacman_update(args.noupgrade)
         message("\tusing pacman.")
@@ -256,13 +260,21 @@ def main():
         message("Will do a clean build even if a previous build exists.")
 
     os.chdir("build")
+
     cpu_count = available_cpu_count()
     if not cpu_count > 0:
         cpu_count = 4
 
-    message("Found " + str(cpu_count) + " CPU cores, building...")
+    job_count = cpu_count
+
+    if has_icecream:
+        job_count = 32
+        message("Found " + str(cpu_count) + " local CPU cores, building with icecream (" + str(job_count) + " simultaneous tasks)...")
+    else:
+        message("Found " + str(cpu_count) + " local CPU cores, building...")
+
     os.system("cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PARTITIONMANAGER=1 .. && " +
-              "make -j" + str(cpu_count) + " && " +
+              "make -j" + str(job_count) + " && " +
               "sudo make install")
     os.chdir(cwd)
 
