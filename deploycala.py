@@ -152,7 +152,7 @@ def setup_icecream():
     os.environ["PATH"] = "/usr/lib/icecream/libexec/icecc/bin:" + path
     os.system('which gcc')
     os.system('which g++')
-    has_icecream = "icecream" in subprocess.check_output(["which", "g++"]).strip()
+    has_icecream = "icecream" in str(subprocess.check_output(["which", "g++"])).strip()
     return has_icecream
 
 # Courtesy of phihag on Stack Overflow,
