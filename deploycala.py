@@ -148,9 +148,9 @@ def setup_icecream():
     os.system('bash -c \'source ~/.bashrc\'')
     os.system('sudo systemctl enable icecream.service')
     os.system('sudo systemctl start icecream.service')
-    os.system('echo "#!/bin/bash\neval \$*" > /tmp/env.sh')
-    os.system('chmod +x /tmp/env.sh')
-    os.system('/tmp/env.sh export PATH=/usr/lib/icecream/libexec/icecc/bin:$PATH')
+    path = os.environ["PATH"]
+    os.environ["PATH"] = "/usr/lib/icecream/libexec/icecc/bin:" + path
+    os.system('which g++')
 
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
