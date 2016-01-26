@@ -84,9 +84,9 @@ def yaourt_update(noupgrade):
     if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
-        os.system("/usr/bin/yaourt -Sy --noconfirm --needed --force " + " ".join(packages))
+        subprocess.call(["yaourt", "-Sy", "--noconfirm", "--needed", "--force"] + packages)
     else:
-        os.system("/usr/bin/yaourt -Syu --noconfirm --needed --force " + " ".join(packages))
+        subprocess.call(["yaourt", "-Syu", "--noconfirm", "--needed", "--force"] + packages)
 
 def pacman_update(noupgrade):
     packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
