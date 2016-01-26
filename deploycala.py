@@ -80,7 +80,7 @@ def update_self():
 
 
 def yaourt_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "icecream"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "aur/icecream"]
     if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
@@ -90,7 +90,7 @@ def yaourt_update(noupgrade):
 
 
 def pacman_update(noupgrade):
-    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "icecream"]
+    packages = ["cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
     if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
@@ -209,14 +209,14 @@ def main():
     if shutil.which("yaourt"):
         message("\tusing yaourt.")
         yaourt_update(args.noupgrade)
+
+        message("Setting up icecream...")
+        setup_icecream()
     elif shutil.which("pacman"):
         pacman_update(args.noupgrade)
         message("\tusing pacman.")
     else:
         bail("no package manager found.")
-
-    message("Setting up icecream...")
-    setup_icecream()
 
     branch = args.branch;
     if not branch:
