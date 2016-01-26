@@ -88,7 +88,7 @@ def yaourt_update(noupgrade):
         subprocess.call(["yaourt -Sy --noconfirm --needed --force " + " ".join(packages)], shell=True)
     else:
         subprocess.call(["yaourt -Syu --noconfirm --needed --force " + " ".join(packages)], shell=True)
-    
+
     subprocess.call(["yaourt -S --aur --noconfirm --needed --force " + " ".join(aurpackages)], shell=True)
 
 
@@ -148,6 +148,9 @@ def setup_icecream():
     os.system('bash -c \'source ~/.bashrc\'')
     os.system('sudo systemctl enable icecream.service')
     os.system('sudo systemctl start icecream.service')
+    os.system('echo "#!/bin/bash\neval $*" > /tmp/env.sh')
+    os.system('chmod +x /tmp/env.sh')
+    os.system('/tmp/env.sh export PATH=/usr/lib/icecream/libexec/icecc/bin:$PATH')
 
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
