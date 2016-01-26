@@ -207,9 +207,11 @@ def main():
         message("Updating build dependencies and performing full system upgrade...")
 
     if shutil.which("yaourt"):
+        message("\tusing yaourt.")
         yaourt_update(args.noupgrade)
     elif shutil.which("pacman"):
         pacman_update(args.noupgrade)
+        message("\tusing pacman.")
     else:
         bail("no package manager found.")
 
