@@ -35,6 +35,7 @@ Many Linux distributions are in varying stages of adopting Calamares as their pr
 
 Operating systems that already ship Calamares:
 
+- [Apricity OS](http://www.apricityos.com/)
 - [BBQLinux](http://bbqlinux.org/)
 - [Chakra](https://chakraos.org/)
 - [KaOS](http://kaosx.us/)
