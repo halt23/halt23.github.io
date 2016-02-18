@@ -192,6 +192,8 @@ def main():
                         help="the branch to checkout and build")
     parser.add_argument("-n", "--noupgrade", action="store_true", dest="noupgrade",
                         help="do not upgrade all the packages on the system before building")
+    parser.add_argument("-p", "--nopull", action="store_true", dest="nopull",
+                        help="do not pull before building (only applies if a clone already exists)")
     parser.add_argument("-i", "--incremental", action="store_true", dest="incremental",
                         help="do incremental builds, i.e. don't clear the build directory before building, if found")
     parser.add_argument("--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
@@ -233,18 +235,25 @@ def main():
         branch = "master"
 
     if os.path.isdir("calamares"):
-        message("Clone found, checking out " + branch + " branch...")
-        os.chdir("calamares")
-        os.system("git checkout --track origin/" + branch + " -b " + branch)
-        os.system("git checkout " + branch)
-        os.system("git pull --rebase")
-        os.system("git submodule update")
-        os.system("git submodule sync")
+        if args.nopull:
+            message("Clone found, building without pulling...")
+            os.chdir("calamares")
+        else:
+            message("Clone found, checking out " + branch + " branch...")
+            os.chdir("calamares")
+            os.system("git checkout --track origin/" + branch + " -b " + branch)
+            os.system("git checkout " + branch)
+            os.system("git pull --rebase")
+            os.system("git submodule update")
+            os.system("git submodule sync")
         if os.path.isdir("build") and not args.incremental:
             shutil.rmtree("build", ignore_errors=True)
             os.mkdir("build")
 
     else:
+        if args.nopull:
+            bail("existing clone not found, can't build without pulling.")
+
         message("Cloning and checking out " + branch + " branch...")
         os.system("git clone https://github.com/calamares/calamares.git")
         os.chdir("calamares")
