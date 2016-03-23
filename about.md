@@ -43,6 +43,7 @@ Operating systems that already ship Calamares:
 - [Manjaro](http://manjaro.org/)
 - [Netrunner](http://www.netrunner.com/)
 - [OpenMamba](http://openmamba.org/en/)
+- [OpenMandriva](https://www.openmandriva.org/)
 - [Sabayon](https://www.sabayon.org/)
 - [Tanglu](http://tanglu.org/)
 
