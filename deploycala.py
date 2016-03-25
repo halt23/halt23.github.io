@@ -80,7 +80,7 @@ def update_self():
 
 
 def yaourt_update(noupgrade):
-    packages = ["git", "cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
+    packages = ["base-devel", "git", "cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
     aurpackages = ["icecream"]
     if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
@@ -93,7 +93,7 @@ def yaourt_update(noupgrade):
 
 
 def pacman_update(noupgrade):
-    packages = ["git", "cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
+    packages = ["base-devel", "git", "cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack"]
     if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
