@@ -78,12 +78,14 @@ def update_self():
 
     os.execv(sys.executable, myargs)
 
+def pacman_mirrors:
+    if shutil.which("pacman-mirrors"):
+        os.system("sudo pacman-mirrors -c Germany")
+
 
 def yaourt_update(noupgrade):
     packages = ["base-devel", "git", "cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "qt5-webengine"]
     aurpackages = ["icecream"]
-    if shutil.which("pacman-mirrors"):
-        os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
         subprocess.call(["yaourt -Sy --noconfirm --needed --force " + " ".join(packages)], shell=True)
     else:
@@ -94,8 +96,6 @@ def yaourt_update(noupgrade):
 
 def pacman_update(noupgrade):
     packages = ["base-devel", "git", "cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "qt5-webengine"]
-    if shutil.which("pacman-mirrors"):
-        os.system("sudo pacman-mirrors -c Germany")
     if noupgrade:
         os.system("sudo pacman -Sy --noconfirm --needed --force " + " ".join(packages))
     else:
@@ -219,14 +219,24 @@ def main():
 
     has_icecream = False
     if shutil.which("yaourt"):
+        pacman_mirrors()
         message("\tusing yaourt.")
         yaourt_update(args.noupgrade)
 
         message("Setting up icecream...")
         has_icecream = setup_icecream()
     elif shutil.which("pacman"):
-        pacman_update(args.noupgrade)
-        message("\tusing pacman.")
+        pacman_mirrors()
+        os.system("sudo pacman -Sy --noconfirm --needed --force yaourt || true")
+        if shutil.which("yaourt"):
+            message("\tusing yaourt.")
+            yaourt_update(args.noupgrade)
+
+            message("Setting up icecream...")
+            has_icecream = setup_icecream()
+        else:
+            message("\tusing pacman.")
+            pacman_update(args.noupgrade)
     else:
         bail("no package manager found.")
 
