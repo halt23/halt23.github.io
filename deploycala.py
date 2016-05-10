@@ -78,7 +78,7 @@ def update_self():
 
     os.execv(sys.executable, myargs)
 
-def pacman_mirrors:
+def pacman_mirrors():
     if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
 
