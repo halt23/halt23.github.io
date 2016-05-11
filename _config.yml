@@ -6,7 +6,7 @@
 name: Calamares
 
 # Short bio or description (displayed in the header)
-description: The universal system installer
+description: The universal installer framework
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://raw.githubusercontent.com/calamares/calamares/master/src/branding/default/squid.png
