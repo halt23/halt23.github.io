@@ -84,7 +84,11 @@ def pacman_mirrors():
 
 
 def yaourt_update(noupgrade):
-    packages = ["base-devel", "git", "cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "qt5-webengine"]
+    packages = ["autoconf", "automake", "binutils", "bison", "fakeroot", "git",
+                "flex", "gcc", "gcc-libs-multilib", "libtool", "m4", "make",
+                "patch", "cmake", "extra-cmake-modules", "boost", "qt5-tools",
+                "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack",
+                "qt5-webengine"]
     aurpackages = ["icecream"]
     if noupgrade:
         subprocess.call(["yaourt -Sy --noconfirm --needed --force " + " ".join(packages)], shell=True)
@@ -95,7 +99,11 @@ def yaourt_update(noupgrade):
 
 
 def pacman_update(noupgrade):
-    packages = ["base-devel", "git", "cmake", "extra-cmake-modules", "boost", "qt5-tools", "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack", "qt5-webengine"]
+    packages = ["autoconf", "automake", "binutils", "bison", "fakeroot", "git",
+                "flex", "gcc", "gcc-libs-multilib", "libtool", "m4", "make",
+                "patch", "cmake", "extra-cmake-modules", "boost", "qt5-tools",
+                "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack",
+                "qt5-webengine"]
     if noupgrade:
         os.system("sudo pacman -Sy --noconfirm --needed --force " + " ".join(packages))
     else:
