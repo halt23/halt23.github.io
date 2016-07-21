@@ -103,7 +103,8 @@ def pacman_update(noupgrade):
                 "flex", "gcc", "gcc-libs-multilib", "libtool", "m4", "make",
                 "patch", "cmake", "extra-cmake-modules", "boost", "qt5-tools",
                 "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack",
-                "qt5-webengine"]
+                "qt5-webengine", "kpmcore", "qt5-location", "icu", "qt5-declarative",
+                "qt5-translations", "qt5-xmlpatterns"]
     if noupgrade:
         os.system("sudo pacman -Sy --noconfirm --needed --force " + " ".join(packages))
     else:
@@ -205,6 +206,8 @@ def main():
     parser.add_argument("-i", "--incremental", action="store_true", dest="incremental",
                         help="do incremental builds, i.e. don't clear the build directory before building, if found")
     parser.add_argument("--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
+    parser.add_argument("-u", "--url", nargs=1, default="https://github.com/calamares/calamares.git",
+                        dest="url", help="change the remote URL we clone Calamares from.")
     args = parser.parse_args()
 
     if not args.noupdate:
@@ -273,7 +276,7 @@ def main():
             bail("existing clone not found, can't build without pulling.")
 
         message("Cloning and checking out " + branch + " branch...")
-        os.system("git clone https://github.com/calamares/calamares.git")
+        os.system("git clone %s" % args.url)
         os.chdir("calamares")
         os.system("git checkout --track origin/"+ branch +" -b " + branch)
         os.system("git submodule init")
