@@ -85,7 +85,7 @@ def pacman_mirrors():
 
 def yaourt_update(noupgrade):
     packages = ["autoconf", "automake", "binutils", "bison", "fakeroot", "git",
-                "flex", "gcc", "gcc-libs-multilib", "libtool", "m4", "make",
+                "flex", "gcc-multilib", "gcc-libs-multilib", "libtool", "m4", "make",
                 "patch", "cmake", "extra-cmake-modules", "boost", "qt5-tools",
                 "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack",
                 "qt5-webengine"]
