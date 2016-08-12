@@ -37,6 +37,7 @@ Operating systems that already ship Calamares:
 
 - [Apricity OS](http://www.apricityos.com/)
 - [BBQLinux](http://bbqlinux.org/)
+- [BlackPanther OS](http://www.blackpantheros.eu/)
 - [Chakra](https://chakraos.org/)
 - [KaOS](http://kaosx.us/)
 - [Kogaion](http://rogentos.ro/)
