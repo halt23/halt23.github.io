@@ -53,7 +53,6 @@ Operating systems that are evaluating Calamares in pre-release builds:
 
 - [Fedora](https://fedoraproject.org/) (KDE remix)
 - [Maui](http://www.maui-project.org/)
-- [OpenMandriva](https://www.openmandriva.org/)
 - [PCLinuxOS](http://www.pclinuxos.com/)
 
 ## What is Calamares made of
