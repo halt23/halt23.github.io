@@ -47,6 +47,7 @@ Operating systems that already ship Calamares:
 - [OpenMamba](http://openmamba.org/en/)
 - [OpenMandriva](https://www.openmandriva.org/)
 - [Pisi Linux](https://pisilinux2.wordpress.com/)
+- [Redcore Linux](http://redcorelinux.org)
 - [Sabayon](https://www.sabayon.org/)
 - [Tanglu](http://tanglu.org/)
 
