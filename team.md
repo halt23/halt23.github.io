@@ -22,7 +22,7 @@ Debian support
 
 Former contributors:  
 [**Aurélien Gâteau**](https://github.com/agateau)
-Partitioning, job queue
+Partitioning, job queue  
 [**Pier Luigi Fiorini**](https://github.com/plfiorini)
 Maui support  
 
