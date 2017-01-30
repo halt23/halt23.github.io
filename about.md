@@ -51,6 +51,7 @@ Operating systems that already ship Calamares:
 - [Pisi Linux](https://pisilinux2.wordpress.com/)
 - [Redcore Linux](http://redcorelinux.org)
 - [Sabayon](https://www.sabayon.org/)
+- [Siduction](https://siduction.org/)
 - [Tanglu](http://tanglu.org/)
 
 Operating systems that are evaluating Calamares in pre-release builds:
