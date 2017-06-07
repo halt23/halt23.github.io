@@ -35,6 +35,7 @@ Many Linux distributions are in varying stages of adopting Calamares as their pr
 
 Operating systems that already ship Calamares:
 
+- [AIMS Desktop](https://desktop.aims.ac.za/)
 - [Apricity OS](http://www.apricityos.com/)
 - [BBQLinux](http://bbqlinux.org/)
 - [BlackPanther OS](http://www.blackpantheros.eu/)
