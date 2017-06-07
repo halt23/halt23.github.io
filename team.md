@@ -5,9 +5,8 @@ permalink: /team/
 published: true
 ---
 
-
-[**Teo Mrnjavac**](https://github.com/teo)  
-Maintainer | Software developer at Blue Systems  
+[**Adriaan de Groot**](https://github.com/adriaandegroot)  
+Maintainer | Software developer for Blue Systems  
 
 [**Anke Boersma**](https://github.com/demmm)
 Various modules, KaOS support  
@@ -21,6 +20,8 @@ Manjaro support
 Debian support  
 
 Former contributors:  
+[**Teo Mrnjavac**](https://github.com/teo)  
+Previous Maintainer
 [**Aurélien Gâteau**](https://github.com/agateau)
 Partitioning, job queue  
 [**Pier Luigi Fiorini**](https://github.com/plfiorini)
