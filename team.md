@@ -20,8 +20,8 @@ Manjaro support
 Debian support  
 
 Former contributors:  
-[**Teo Mrnjavac**](https://github.com/teo)  
-Previous Maintainer
+[**Teo Mrnjavac**](https://github.com/teo)
+Previous Maintainer  
 [**Aurélien Gâteau**](https://github.com/agateau)
 Partitioning, job queue  
 [**Pier Luigi Fiorini**](https://github.com/plfiorini)
