@@ -4,6 +4,7 @@
 # === This file is part of Calamares - <http://github.com/calamares> ===
 #
 #   Copyright 2015, Teo Mrnjavac <teo@kde.org>
+#   Copyright 2017, Adriaan de Groot <groot@kde.org>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -17,6 +18,17 @@
 #
 #   You should have received a copy of the GNU General Public License
 #   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
+
+# === Deploy Calamares ===
+#
+#   This script installs the build-dependencies of Calamares (a
+#   compiler, cmake, etc.), then clones Calamares from GitHub
+#   and builds it.
+#
+#   The script is tested and used on:
+#       - Manjaro
+#
+#   The script should work on most distro's using yaourt or pacman.
 
 import argparse
 import os
@@ -269,6 +281,8 @@ def main():
             os.system("git submodule sync")
         if os.path.isdir("build") and not args.incremental:
             shutil.rmtree("build", ignore_errors=True)
+            os.mkdir("build")
+        elif not os.path.exists("build"):
             os.mkdir("build")
 
     else:
