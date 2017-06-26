@@ -26,7 +26,8 @@
 #   and builds it.
 #
 #   The script is tested and used on:
-#       - Manjaro
+#       - Manjaro (primary platform)
+#       - Netrunner (experimental phase)
 #
 #   The script should work on most distro's using yaourt or pacman.
 
@@ -76,10 +77,35 @@ def bail(msg):
     sys.exit(1)
 
 
+if sys.version_info.major != 3:
+    bail("deploycala needs Python 3")
+if not callable(getattr(shutil, "which", None)):
+    bail("deploycala needs shutil.which")
+
+
+if shutil.which("curl"):
+    def fetch(url, target):
+        fetcher = shutil.which("curl")
+        return os.system(fetcher + " --create-dirs -o " + target + " -L " + url)
+elif shutil.which("wget"):
+    def fetch(url, target):
+        fetcher = shutil.which("wget")
+        r = os.system(fetcher + " --backups=1 " + target + " " + url)
+        if r > 255:
+            r &= 0xff
+        if r:
+            os.rename(target+".1", target)
+        return r
+else:
+    bail("deploycala needs curl or wget")
+
+
 def update_self():
     message("Updating deployment script...")
     thisfile = os.path.realpath(__file__)
-    os.system("curl -o " + thisfile + " -L https://calamares.io/deploycala.py")
+    if fetch("https://calamares.io/deploycala.py", thisfile) != 0:
+        bail("Self-update failed")
+
     os.system("chmod +x " + thisfile)
 
     myargs = sys.argv[:]
@@ -141,7 +167,7 @@ def inplace_change(filename, old_string, new_string):
 
 def get_file_if_not_exists(source, target):
     if not os.path.exists(target):
-        if os.system("curl --create-dirs -o " + target + " -L " + source) == 0:
+        if fetch(source, target) == 0:
             message('Fetched ' + target)
         else:
             warning('cannot fetch ' + target)
@@ -260,6 +286,24 @@ def main():
         else:
             message("\tusing pacman.")
             pacman_update(args.noupgrade)
+    elif shutil.which("apt-get"):
+        message("\tusing apt-get.")
+        os.system("sudo apt-get -y update")
+        if not args.noupgrade:
+            os.system("sudo apt-get -q -y upgrade")
+        _P = (
+            "cmake",
+            "git",
+            "qtbase5-dev",
+            "qtwebengine5-dev",
+            "libqt5svg5-dev",
+            "libyaml-cpp-dev",
+            "libpolkit-qt5-1-dev",
+            "extra-cmake-modules",
+            "libkf5parts-dev",
+            "libkpmcore4-dev",
+            )
+        os.system("sudo apt-get -q -y install " + " ".join(_P))
     else:
         bail("no package manager found.")
 
