@@ -303,6 +303,7 @@ def main():
             "libkf5parts-dev",
             "libkpmcore4-dev",
             "libparted-dev",
+            "libatasmart-dev",
             )
         os.system("sudo apt-get -q -y install " + " ".join(_P))
     else:
