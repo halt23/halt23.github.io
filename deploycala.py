@@ -302,6 +302,7 @@ def main():
             "extra-cmake-modules",
             "libkf5parts-dev",
             "libkpmcore4-dev",
+            "libparted-dev",
             )
         os.system("sudo apt-get -q -y install " + " ".join(_P))
     else:
