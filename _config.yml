@@ -49,6 +49,9 @@ baseurl: "https://calamares.io"
 # Set the number of posts per page
 paginate: 4
 
+# For ACME
+include: [".well-known"]
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
