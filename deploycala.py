@@ -294,16 +294,19 @@ def main():
         _P = (
             "cmake",
             "git",
+            "gettext",
             "qtbase5-dev",
             "qtwebengine5-dev",
+            "qtdeclarative5-dev",
             "libqt5svg5-dev",
             "libyaml-cpp-dev",
             "libpolkit-qt5-1-dev",
             "extra-cmake-modules",
             "libkf5parts-dev",
-            "libkpmcore4-dev",
+            "libkpmcore-dev",
             "libparted-dev",
             "libatasmart-dev",
+            "libboost-dev",
             )
         os.system("sudo apt-get -q -y install " + " ".join(_P))
     else:
@@ -363,7 +366,7 @@ def main():
     else:
         message("Found " + str(cpu_count) + " local CPU cores, building...")
 
-    os.system("cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PARTITIONMANAGER=1 -DWEBVIEW_FORCE_WEBKIT=1 -DWITH_PYTHONQT=ON .. && " +
+    os.system("cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PARTITIONMANAGER=1 -DWITH_PYTHONQT=ON .. && " +
               "make -j" + str(job_count) + " && " +
               "sudo make install")
     os.chdir(cwd)
