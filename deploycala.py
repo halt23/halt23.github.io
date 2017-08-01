@@ -28,8 +28,16 @@
 #   The script is tested and used on:
 #       - Manjaro (primary platform)
 #       - Netrunner (experimental phase)
+#       - KDE Neon (Debian derivative, experimental)
 #
-#   The script should work on most distro's using yaourt or pacman.
+#   The script should work on most distro's using yaourt, apt or pacman.
+#
+# === Script Usage ===
+#
+# Use `deploycala.py --help` for general help. When developing this
+# script, the undocumented flag `--noupdate` will avoid overwriting
+# this script (otherwise, the script is fetched for updates from calamares.io).
+#
 
 import argparse
 import os
