@@ -133,6 +133,7 @@ def yaourt_update(noupgrade):
     packages = ["autoconf", "automake", "binutils", "bison", "fakeroot", "git",
                 "flex", "gcc-multilib", "gcc-libs-multilib", "libtool", "m4", "make",
                 "patch", "cmake", "extra-cmake-modules", "boost", "qt5-tools",
+                "yaml-cpp",
                 "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack",
                 "qt5-webengine"]
     aurpackages = ["icecream"]
@@ -148,6 +149,7 @@ def pacman_update(noupgrade):
     packages = ["autoconf", "automake", "binutils", "bison", "fakeroot", "git",
                 "flex", "gcc", "gcc-libs-multilib", "libtool", "m4", "make",
                 "patch", "cmake", "extra-cmake-modules", "boost", "qt5-tools",
+                "yaml-cpp",
                 "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack",
                 "qt5-webengine", "kpmcore", "qt5-location", "icu", "qt5-declarative",
                 "qt5-translations", "qt5-xmlpatterns"]
