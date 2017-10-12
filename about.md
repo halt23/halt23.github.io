@@ -41,7 +41,6 @@ Operating systems that already ship Calamares:
 - [BlackPanther OS](http://www.blackpantheros.eu/)
 - [Chakra](https://chakraos.org/)
 - [GeckoLinux](http://geckolinux.github.io/)
-- [Hamara Linux](https://www.hamaralinux.org/)
 - [Kannolo](https://kannolo.sourceforge.io/) (Fedora Remix)
 - [KaOS](http://kaosx.us/)
 - [KDE Neon](https://neon.kde.org/)
@@ -59,6 +58,7 @@ Operating systems that already ship Calamares:
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
+- [Hamara Linux](https://www.hamaralinux.org/)
 - [Maui](http://www.maui-project.org/)
 - [PCLinuxOS](http://www.pclinuxos.com/)
 
