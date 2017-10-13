@@ -50,20 +50,23 @@ Operating systems that already ship Calamares:
 - [OpenMamba](http://openmamba.org/en/)
 - [OpenMandriva](https://www.openmandriva.org/)
 - [Pisi Linux](https://pisilinux2.wordpress.com/)
-- [Redcore Linux](http://redcorelinux.org)
+- [Redcore Linux](http://redcorelinux.org/)
 - [Sabayon](https://www.sabayon.org/)
 - [Siduction](https://siduction.org/)
-- [SwagArch](https://swagarch.github.io)
+- [SwagArch](https://swagarch.github.io/)
 - [Tanglu](http://tanglu.org/)
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
+- [Hamara Linux](https://www.hamaralinux.org/)
 - [Maui](http://www.maui-project.org/)
 - [PCLinuxOS](http://www.pclinuxos.com/)
 
 Operating systems that ship Calamares in their package repositories for third-party derivatives to use:
 
+- [Debian](https://debian.org/)
 - [Fedora](https://fedoraproject.org/)
+- [Gentoo](https://gentoo.org/)
 
 ## What is Calamares made of
 
