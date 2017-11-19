@@ -59,6 +59,7 @@ Operating systems that already ship Calamares:
 Operating systems that are evaluating Calamares in pre-release builds:
 
 - [Hamara Linux](https://www.hamaralinux.org/)
+- [Lubuntu](https://lubuntu.net/)
 - [Maui](http://www.maui-project.org/)
 - [Parabola](https://www.parabola.nu/)
 - [PCLinuxOS](http://www.pclinuxos.com/)
