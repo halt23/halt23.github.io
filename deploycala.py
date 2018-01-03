@@ -4,7 +4,7 @@
 # === This file is part of Calamares - <http://github.com/calamares> ===
 #
 #   Copyright 2015, Teo Mrnjavac <teo@kde.org>
-#   Copyright 2017, Adriaan de Groot <groot@kde.org>
+#   Copyright 2017-2018, Adriaan de Groot <groot@kde.org>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -124,18 +124,47 @@ def update_self():
 
     os.execv(sys.executable, myargs)
 
+
 def pacman_mirrors():
     if shutil.which("pacman-mirrors"):
         os.system("sudo pacman-mirrors -c Germany")
 
 
+# Package names shared by all
+generic_packages = [
+    # GNU
+    "autoconf",
+    "automake",
+    "bison",
+    "flex",
+    "git",
+    "libtool",
+    "m4",
+    "make",
+    # C++
+    "cmake",
+    "extra-cmake-modules"
+    ]
+
+
 def yaourt_update(noupgrade):
-    packages = ["autoconf", "automake", "binutils", "bison", "fakeroot", "git",
-                "flex", "gcc-multilib", "gcc-libs-multilib", "libtool", "m4", "make",
-                "patch", "cmake", "extra-cmake-modules", "boost", "qt5-tools",
-                "yaml-cpp",
-                "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack",
-                "qt5-webengine"]
+    packages = generic_packages + [
+        "binutils",
+        "fakeroot",
+        "gcc-multilib",
+        "gcc-libs-multilib",
+        "boost",
+        "patch",
+        "qt5-tools",
+        "yaml-cpp",
+        "kiconthemes",
+        "kservice",
+        "kio",
+        "kparts",
+        "qtcreator",
+        "ack",
+        "qt5-webengine"
+        ]
     aurpackages = ["icecream"]
     if noupgrade:
         subprocess.call(["yaourt -Sy --noconfirm --needed --force " + " ".join(packages)], shell=True)
@@ -146,17 +175,60 @@ def yaourt_update(noupgrade):
 
 
 def pacman_update(noupgrade):
-    packages = ["autoconf", "automake", "binutils", "bison", "fakeroot", "git",
-                "flex", "gcc", "gcc-libs-multilib", "libtool", "m4", "make",
-                "patch", "cmake", "extra-cmake-modules", "boost", "qt5-tools",
-                "yaml-cpp",
-                "kiconthemes", "kservice", "kio", "kparts", "qtcreator", "ack",
-                "qt5-webengine", "kpmcore", "qt5-location", "icu", "qt5-declarative",
-                "qt5-translations", "qt5-xmlpatterns"]
+    packages = generic_packages + [
+        "binutils",
+        "fakeroot",
+        "gcc",
+        "gcc-libs-multilib",
+        "boost",
+        "patch",
+        "qt5-tools",
+        "yaml-cpp",
+        "kiconthemes",
+        "kservice",
+        "kio",
+        "kparts",
+        "qtcreator",
+        "ack",
+        "qt5-webengine",
+        "kpmcore",
+        "qt5-location",
+        "icu",
+        "qt5-declarative",
+        "qt5-translations",
+        "qt5-xmlpatterns"
+        ]
     if noupgrade:
         os.system("sudo pacman -Sy --noconfirm --needed --force " + " ".join(packages))
     else:
         os.system("sudo pacman -Syu --noconfirm --needed --force " + " ".join(packages))
+
+
+def apt_update(noupgrade):
+    packages = generic_packages + [
+        "g++",
+        "gettext",
+        "qtbase5-dev",
+        "qttools5-dev",
+        "qtwebengine5-dev",
+        "qtdeclarative5-dev",
+        "libqt5svg5-dev",
+        "libyaml-cpp-dev",
+        "libpolkit-qt5-1-dev",
+        "libkf5parts-dev",
+        "libkpmcore-dev",
+        "libparted-dev",
+        "libatasmart-dev",
+        "libboost-dev",
+        "python3-dev",
+        "libboost-python-dev",
+        ]
+
+    os.system("sudo apt-get -y update")
+    if not noupgrade:
+        os.system("sudo apt-get -q -y upgrade")
+    os.system("sudo apt-get -q -y install " + " ".join(packages))
+
 
 def setup_sudo_gdb():
     os.system("sudo touch /usr/bin/sudo-gdb")
@@ -256,6 +328,8 @@ def main():
     parser.add_argument("--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
     parser.add_argument("-u", "--url", nargs=1, default="https://github.com/calamares/calamares.git",
                         dest="url", help="change the remote URL we clone Calamares from.")
+    parser.add_argument("-F", "--full-ide", action="store_true", default=False, dest="full_ide",
+                        help="install IDE and support files")
     args = parser.parse_args()
 
     if not args.noupdate:
@@ -298,27 +372,7 @@ def main():
             pacman_update(args.noupgrade)
     elif shutil.which("apt-get"):
         message("\tusing apt-get.")
-        os.system("sudo apt-get -y update")
-        if not args.noupgrade:
-            os.system("sudo apt-get -q -y upgrade")
-        _P = (
-            "cmake",
-            "git",
-            "gettext",
-            "qtbase5-dev",
-            "qtwebengine5-dev",
-            "qtdeclarative5-dev",
-            "libqt5svg5-dev",
-            "libyaml-cpp-dev",
-            "libpolkit-qt5-1-dev",
-            "extra-cmake-modules",
-            "libkf5parts-dev",
-            "libkpmcore-dev",
-            "libparted-dev",
-            "libatasmart-dev",
-            "libboost-dev",
-            )
-        os.system("sudo apt-get -q -y install " + " ".join(_P))
+        apt_update(args.noupgrade)
     else:
         bail("no package manager found.")
 
@@ -336,8 +390,6 @@ def main():
             os.system("git checkout --track origin/" + branch + " -b " + branch)
             os.system("git checkout " + branch)
             os.system("git pull --rebase")
-            os.system("git submodule update")
-            os.system("git submodule sync")
         if os.path.isdir("build") and not args.incremental:
             shutil.rmtree("build", ignore_errors=True)
             os.mkdir("build")
@@ -352,9 +404,6 @@ def main():
         os.system("git clone %s" % args.url)
         os.chdir("calamares")
         os.system("git checkout --track origin/"+ branch +" -b " + branch)
-        os.system("git submodule init")
-        os.system("git submodule update")
-        os.system("git submodule sync")
         os.mkdir("build")
 
     if args.incremental:
@@ -385,11 +434,12 @@ def main():
     os.system("sudo cp -R /usr/share/calamares.backup/* /usr/share/calamares/")
     os.system("sudo cp -R /etc/calamares.backup/* /etc/calamares/")
 
-    message("Setting up sudo-gdb...")
-    setup_sudo_gdb()
+    if args.full_ide:
+        message("Setting up sudo-gdb...")
+        setup_sudo_gdb()
 
-    message("Setting up QtCreator configuration...")
-    setup_qtcreator()
+        message("Setting up QtCreator configuration...")
+        setup_qtcreator()
 
     message("All done.")
     os.chdir(cwd)
