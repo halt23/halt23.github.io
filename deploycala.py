@@ -425,7 +425,7 @@ def main():
     else:
         message("Found " + str(cpu_count) + " local CPU cores, building...")
 
-    os.system("cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PARTITIONMANAGER=1 -DWITH_PYTHONQT=ON .. && " +
+    os.system("cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PYTHONQT=ON .. && " +
               "make -j" + str(job_count) + " && " +
               "sudo make install")
     os.chdir(cwd)
