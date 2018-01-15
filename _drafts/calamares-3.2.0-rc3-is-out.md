@@ -18,18 +18,19 @@ modules support.
 
 Calamares 3.2.0-rc3 is a features-and-functionality release.
 
-* KCrash (known from the desktop helper *Dr Konqi*) is now an optional
-  dependency; it can help developers and users report problems with
-  Calamares.
 * New translations Hindi, Marathi (thanks to *asaagar*) and Albanian
   (thanks to *besnik*) are now available.
 * Documentation improvements
   (thanks to *crazy*, *rajudev*).
+* CMake now reports on skipped modules at the end of the configuration
+  phase. This will list modules explicitly skipped by the build
+  configuration, but also optional modules that are skipped because
+  of missing dependencies.
 * Minor polishing and tidying all over the place
   (thanks to *bezzy1999*, *bill-auger*).
 * It is now possible to configure Calamares to "phone home" at the
   end of an installation and to configure *update-manager* with
-  a machine-specific URL.
+  a machine-specific URL. Use the *tracking* module for this.
 * A new module supporting OpenRC initialization of encrypted filesystems.
   For distro's that do not use systemd, the `openrcdmcryptcfg` module
   can be used alongside other modules.
@@ -42,8 +43,33 @@ Calamares 3.2.0-rc3 is a features-and-functionality release.
   For example, Catalan and Hausa now select appropriate default
   keyboard mappings instead of their national defaults (Spanish and English,
   respectively).
+* New modules *ShellProcess* and *ContextualProcess* can run lists
+  of (shell) commands. The *ShellProcess* module can replace
+  other modules that are copied from dummyprocess with a single
+  configuration file and an instance declaration in `settings.conf`
+  (e.g. replace a forked module with a configuration file).
+  The *ContextualProcess* module runs a list of shell commands
+  based on the value of global configuration values (e.g.
+  the firmware type of the host system).
+
+Changed optional requirements:
+* KCrash (known from the desktop helper *Dr Konqi*) is now an optional
+  dependency; it can help developers and users report problems with
+  Calamares.
 
 Changed mandatory requirements:
-* KPMcore 3.3 is required.
+* Libparted is no longer mandatory. If the library is missing,
+  Calamares will disable the (rather inaccurate) check for
+  available space for installation in the welcome screen.
+  If the check is enabled in `welcome.conf`, it will always fail.
+* KPMcore 3.3 is required. If the required KPMCore version is not
+  available, the *partition* module is skipped (this will be noted
+  in the CMake output).
 
-If you experience an issue with Calamares, please tell us all about it on the [**Calamares issue tracker**](https://github.com/calamares/calamares/issues). For a full change list, or the full list of [issues closed](https://github.com/calamares/calamares/milestone/41?closed=1) with this release, please see the Calamares code repository.
+If you experience an issue with Calamares, please tell us all about it
+on the [**Calamares issue tracker**][1]. For a full change list, or
+the full list of [issues closed][2] with this release, please see the
+Calamares code repository.
+
+[1]: https://github.com/calamares/calamares/issues
+[2]: https://github.com/calamares/calamares/milestone/42?closed=1
