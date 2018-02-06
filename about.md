@@ -49,7 +49,7 @@ Operating systems that already ship Calamares:
 - [Netrunner](http://www.netrunner.com/)
 - [OpenMamba](http://openmamba.org/en/)
 - [OpenMandriva](https://www.openmandriva.org/)
-- [Pisi Linux](https://pisilinux2.wordpress.com/)
+- [Pisi Linux](https://www.pisilinux.org/)
 - [Redcore Linux](http://redcorelinux.org/)
 - [Sabayon](https://www.sabayon.org/)
 - [Siduction](https://siduction.org/)
