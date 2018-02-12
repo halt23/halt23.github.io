@@ -29,6 +29,7 @@
 #       - Manjaro (primary platform)
 #       - Netrunner (experimental phase)
 #       - KDE Neon (Debian derivative, experimental)
+#       - SUSE Krypton (experimental)
 #
 #   The script should work on most distro's using yaourt, apt or pacman.
 #
@@ -229,6 +230,35 @@ def apt_update(noupgrade):
         os.system("sudo apt-get -q -y upgrade")
     os.system("sudo apt-get -q -y install " + " ".join(packages))
 
+def zypper_update(noupgrade):
+    packages = generic_packages + [
+        "gcc-c++",
+        "libqt5-qtbase-devel",
+        "libqt5-linguist-devel",
+        "libqt5-qtsvg-devel",
+        "libqt5-qtdeclarative-devel",
+        "libqt5-qtwebengine-devel",
+        "yaml-cpp-devel",
+        "libpolkit-qt5-1-devel",
+        "extra-cmake-modules",
+        "kservice-devel",
+        "kpackage-devel",
+        "kparts-devel",
+        "kcrash-devel",
+        "kpmcore-devel",
+        "plasma5-workspace-devel",
+        "plasma-framework-devel",
+        "libpwquality-devel",
+        "parted-devel",
+        "python3-devel",
+        "boost-devel",
+        "libboost_python-py3-*-devel",
+        "libatasmart-devel"
+        ]
+    os.system("zypper refresh -y")
+    if not noupgrade:
+        os.system("sudo zypper update -y")
+    os.system("sudo zypper install -y -l " + " ".join(packages))
 
 def setup_sudo_gdb():
     os.system("sudo touch /usr/bin/sudo-gdb")
@@ -370,6 +400,9 @@ def main():
         else:
             message("\tusing pacman.")
             pacman_update(args.noupgrade)
+    elif shutil.which("zypper"):
+        message("\tusing zypper.")
+        zypper_update(args.noupgrade)
     elif shutil.which("apt-get"):
         message("\tusing apt-get.")
         apt_update(args.noupgrade)
