@@ -26,6 +26,11 @@ Calamares 3.2.0-rc4 is a features-and-functionality release.
    output, **without** also enabling debug mode which loads modules
    from the current directory. Optionally you can give `-D` a
    debugging value from 0 (no debug logging) to 9 (very verbose).
+ * A new example branding module, called *samegame*, has been added.
+   This can be used instead of the QML Slideshow
+   so that users can play a simple clicking game while
+   the system is installed. This is intended primarily to show that
+   there is nothing special about the QML Slideshow in Calamares.
 
 If you experience an issue with Calamares, please tell us all about it
 on the [**Calamares issue tracker**][1]. For a full change list, or
