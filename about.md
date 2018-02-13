@@ -58,6 +58,7 @@ Operating systems that already ship Calamares:
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
+- [Bluestar Linux](http://bluestarlinux.sourceforge.net/)
 - [Frugalware](https://frugalware.org/)
 - [Hamara Linux](https://www.hamaralinux.org/)
 - [Lubuntu](http://lubuntu.me/)
