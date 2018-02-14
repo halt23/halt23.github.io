@@ -39,6 +39,7 @@ Operating systems that already ship Calamares:
 - [Apricity OS](http://www.apricityos.com/)
 - [BBQLinux](http://bbqlinux.org/)
 - [BlackPanther OS](http://www.blackpantheros.eu/)
+- [Bluestar Linux](http://bluestarlinux.sourceforge.net/)
 - [Chakra](https://chakraos.org/)
 - [GeckoLinux](http://geckolinux.github.io/)
 - [Kannolo](https://kannolo.sourceforge.io/) (Fedora Remix)
@@ -58,7 +59,6 @@ Operating systems that already ship Calamares:
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
-- [Bluestar Linux](http://bluestarlinux.sourceforge.net/)
 - [Frugalware](https://frugalware.org/)
 - [Hamara Linux](https://www.hamaralinux.org/)
 - [Lubuntu](http://lubuntu.me/)
