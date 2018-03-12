@@ -32,15 +32,27 @@ Calamares 3.2.0-rc4 is a features-and-functionality release.
    information can be more easily understood. The number in
    square brackets in a log message (e.g. `[6]`) is the debug-level,
    where lower numbers are more important. `[1]` is reserved for errors.
- * A new example branding module, called *samegame*, has been added.
-   This can be used instead of the QML Slideshow
-   so that users can play a simple clicking game while
-   the system is installed. This is intended primarily to show that
-   there is nothing special about the QML Slideshow in Calamares.
  * The *contextualprocess* module now also supports a fallback
    (wildcard) match. If no other value matches a global configuration
    value, then the commands associated with the `*` value are run.
  * Python jobs can now issue warnings through the API.
+ * The `locale.gen` file is now edited more conservatively; only lines
+   starting with a comment sign immediately followed by an enabled-locale
+   are uncommented.
+ * Screenshots in the Plasma Look-and-Feel module are resized to fit the
+   display in the selection widget.
+ * The build
+
+The branding module has also seen an overhaul. This better supports
+branding modules that can be developed outside of the Calamares source
+tree (so reducing the need for forks). There is a [calamares branding][3]
+repository with examples, showing how branding modules can be built
+independently. The default Calamares slideshow framework has been extended
+with some new classes which can be used. Functionality that does not
+make sense in an install-time slideshow (e.g. hitting the *c* key clears
+the screen) has been removed. Distributions that use the *Presentation*
+and *Slide* QML classes provided by Calamares are **strongly** advised
+to double-check their slideshow functionality in this release.
 
 If you experience an issue with Calamares, please tell us all about it
 on the [**Calamares issue tracker**][1]. For a full change list, or
@@ -49,3 +61,4 @@ Calamares code repository.
 
 [1]: https://github.com/calamares/calamares/issues
 [2]: https://github.com/calamares/calamares/milestone/42?closed=1
+[3]: https://github.com/calamares/calamares-branding/
