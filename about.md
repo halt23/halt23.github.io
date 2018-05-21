@@ -71,6 +71,7 @@ Operating systems that ship Calamares in their package repositories for third-pa
 - [Debian](https://debian.org/)
 - [Fedora](https://fedoraproject.org/)
 - [Gentoo](https://gentoo.org/)
+- [openSUSE](https://opensuse.org/) (from Leap 15)
 
 ## What is Calamares made of
 
