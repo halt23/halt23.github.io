@@ -230,6 +230,15 @@ def apt_update(noupgrade):
         os.system("sudo apt-get -q -y upgrade")
     os.system("sudo apt-get -q -y install " + " ".join(packages))
 
+
+def dnf_update(noupgrade):
+    packages = generic_packages
+    if not noupgrade:
+        os.system("sudo dnf -q -y distro-sync")
+    os.system("sudo dnf -q -y builddep calamares")
+    os.system("sudo dnf -q -y install " + " ".join(packages))
+
+
 def zypper_update(noupgrade):
     packages = generic_packages + [
         "gcc-c++",
@@ -406,6 +415,9 @@ def main():
     elif shutil.which("apt-get"):
         message("\tusing apt-get.")
         apt_update(args.noupgrade)
+    elif shutil.which("dnf"):
+        message("\tusing dnf.")
+        dnf_update(args.noupgrade)
     else:
         bail("no package manager found.")
 
