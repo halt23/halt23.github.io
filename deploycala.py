@@ -364,11 +364,13 @@ def main():
                         help="do not pull before building (only applies if a clone already exists)")
     parser.add_argument("-i", "--incremental", action="store_true", dest="incremental",
                         help="do incremental builds, i.e. don't clear the build directory before building, if found")
-    parser.add_argument("--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
+    parser.add_argument("-N", "--noupdate", action="store_true", dest="noupdate", help=argparse.SUPPRESS)
     parser.add_argument("-u", "--url", nargs=1, default="https://github.com/calamares/calamares.git",
                         dest="url", help="change the remote URL we clone Calamares from.")
     parser.add_argument("-F", "--full-ide", action="store_true", default=False, dest="full_ide",
                         help="install IDE and support files")
+    parser.add_argument("--depth", nargs=1, default=None, dest="depth", help=argparse.SUPPRESS)
+
     args = parser.parse_args()
 
     if not args.noupdate:
@@ -445,8 +447,12 @@ def main():
         if args.nopull:
             bail("existing clone not found, can't build without pulling.")
 
+        git_depth=""
+        if args.depth is not None:
+            git_depth="--depth=%n" % args.depth
+
         message("Cloning and checking out " + branch + " branch...")
-        os.system("git clone %s" % args.url)
+        os.system("git clone %s %s" % (git_depth, args.url))
         os.chdir("calamares")
         os.system("git checkout --track origin/"+ branch +" -b " + branch)
         os.mkdir("build")
