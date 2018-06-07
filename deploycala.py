@@ -232,7 +232,8 @@ def apt_update(noupgrade):
 
 
 def dnf_update(noupgrade):
-    packages = generic_packages
+    packages = generic_packages + [
+        "git" ]
     if not noupgrade:
         os.system("sudo dnf -q -y distro-sync")
     os.system("sudo dnf -q -y builddep calamares")
@@ -373,6 +374,12 @@ def main():
 
     args = parser.parse_args()
 
+    if isinstance(args.depth, list):
+        args.depth = int(args.depth[0])
+    elif isinstance(args.depth, str):
+        args.depth = int(args.depth)
+    # else fail with a type error later
+
     if not args.noupdate:
         update_self()
 
@@ -449,7 +456,7 @@ def main():
 
         git_depth=""
         if args.depth is not None:
-            git_depth="--depth=%n" % args.depth
+            git_depth="--depth=%d" % args.depth
 
         message("Cloning and checking out " + branch + " branch...")
         os.system("git clone %s %s" % (git_depth, args.url))
