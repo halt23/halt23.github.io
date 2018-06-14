@@ -47,6 +47,7 @@ Operating systems that already ship Calamares:
 - [KDE Neon](https://neon.kde.org/)
 - [Kogaion](http://rogentos.ro/)
 - [Manjaro](http://manjaro.org/)
+- [Neptune](https://neptuneos.com/en/start-page.html)
 - [Netrunner](http://www.netrunner.com/)
 - [OpenMamba](http://openmamba.org/en/)
 - [OpenMandriva](https://www.openmandriva.org/)
