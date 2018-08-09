@@ -43,6 +43,7 @@ Operating systems that already ship Calamares:
 - [Bluestar Linux](http://bluestarlinux.sourceforge.net/)
 - [Chakra](https://chakraos.org/)
 - [GeckoLinux](http://geckolinux.github.io/)
+- [Hamara Linux](https://www.hamaralinux.org/)
 - [Kannolo](https://kannolo.sourceforge.io/) (Fedora Remix)
 - [KaOS](http://kaosx.us/)
 - [KDE Neon](https://neon.kde.org/)
@@ -62,7 +63,6 @@ Operating systems that already ship Calamares:
 Operating systems that are evaluating Calamares in pre-release builds:
 
 - [Frugalware](https://frugalware.org/)
-- [Hamara Linux](https://www.hamaralinux.org/)
 - [Lubuntu](http://lubuntu.me/)
 - [Maui](http://www.maui-project.org/)
 - [Parabola](https://www.parabola.nu/)
