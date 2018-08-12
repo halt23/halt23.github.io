@@ -9,12 +9,12 @@ Calamares have participated in the Google Summer of Code 2018.
 
 Caio Jordão Carvalho worked on finishing LVM support
 on Calamares, which include the following updates:
-    - Fixed some important LVM bugs, such as crash in
-    revert operation when you got a previously created Volume Group.
-    - Create new LVM Volume Groups.
-    - Resize LVM Volume Groups.
-    - Deactivate LVM Volume Groups.
-    - Remove LVM Volume Groups.
+ * Fixed some important LVM bugs, such as crash in
+   revert operation when you got a previously created Volume Group.
+ * Create new LVM Volume Groups.
+ * Resize LVM Volume Groups.
+ * Deactivate LVM Volume Groups.
+ * Remove LVM Volume Groups.
 
 This [patch](https://github.com/calamares/calamares/commit/3b82e655d720179fe62901a620eb0796f50ef1d5) 
 presents the code, 
