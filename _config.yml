@@ -1,6 +1,11 @@
 #
 # This file contains configuration flags to customize your site
 #
+# For production:
+#  - leave everything as-is
+# For testing:
+#  - comment-out the baseurl line and use localhost:4000
+#    to look at the site.
 
 # Name of your site (displayed in the header)
 name: Calamares
