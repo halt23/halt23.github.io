@@ -48,6 +48,7 @@ Operating systems that already ship Calamares:
 - [KaOS](http://kaosx.us/)
 - [KDE Neon](https://neon.kde.org/)
 - [Kogaion](http://rogentos.ro/)
+- [Lubuntu](http://lubuntu.me/)
 - [Manjaro](http://manjaro.org/)
 - [Neptune](https://neptuneos.com/en/start-page.html)
 - [Netrunner](http://www.netrunner.com/)
@@ -63,7 +64,6 @@ Operating systems that already ship Calamares:
 Operating systems that are evaluating Calamares in pre-release builds:
 
 - [Frugalware](https://frugalware.org/)
-- [Lubuntu](http://lubuntu.me/)
 - [Maui](http://www.maui-project.org/)
 - [Parabola](https://www.parabola.nu/)
 - [PCLinuxOS](http://www.pclinuxos.com/)
