@@ -21,7 +21,7 @@ Partitioning, KPMCore
 Various modules, KaOS support  
 **Arnaud Ferraris**
 Partitioning layout  
-**Caio Carvalho**
+[**Caio Jordão Carvalho**](https://github.com/cjlcarvalho)
 Partitioning, LVM support  
 **Gabriel Craciunescu**
 Bugfixing all over  
