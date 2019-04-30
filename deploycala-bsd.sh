@@ -69,7 +69,7 @@ if test "FreeBSD" = $( uname ) ; then
 	ide_deps="kdevelop qgit"
 fi
 
-test -z "$pkg" || { echo "This deploy script only works on BSD." ; exit 1 ; }
+test -n "$pkg" || { echo "This deploy script only works on BSD." ; exit 1 ; }
 
 ### DEPENDENCIES
 #
@@ -79,7 +79,7 @@ test -n "$build_qt_deps" && $pkg $build_qt_deps
 test -n "$build_general_deps" && $pkg $build_general_deps
 test -n "$build_kde_deps" && $pkg $build_kde_deps
 
-if true = "$install_ide" ; then
+if test xtrue = "x$install_ide" ; then
 	test -n "$ide_deps" && $pkg $ide_deps
 fi
 
