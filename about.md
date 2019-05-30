@@ -64,6 +64,7 @@ Operating systems that already ship Calamares:
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
+- [Drauger OS](https://draugeros.org/)
 - [Frugalware](https://frugalware.org/)
 - [Maui](http://www.maui-project.org/)
 - [Parabola](https://www.parabola.nu/)
