@@ -43,7 +43,7 @@ Operating systems that already ship Calamares:
 - [BBQLinux](http://bbqlinux.org/)
 - [BlackPanther OS](http://www.blackpantheros.eu/)
 - [Bluestar Linux](http://bluestarlinux.sourceforge.net/)
-- [Chakra](https://chakraos.org/)
+- [Chakra](https://chakralinux.org/)
 - [GeckoLinux](http://geckolinux.github.io/)
 - [Hamara Linux](https://www.hamaralinux.org/)
 - [Kannolo](https://kannolo.sourceforge.io/) (Fedora Remix)
