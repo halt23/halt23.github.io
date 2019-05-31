@@ -55,6 +55,7 @@ Operating systems that already ship Calamares:
 - [Netrunner](http://www.netrunner.com/)
 - [OpenMamba](http://openmamba.org/en/)
 - [OpenMandriva](https://www.openmandriva.org/)
+- [Parabola](https://www.parabola.nu/)
 - [Pisi Linux](https://www.pisilinux.org/)
 - [Redcore Linux](http://redcorelinux.org/)
 - [Sabayon](https://www.sabayon.org/)
@@ -67,7 +68,6 @@ Operating systems that are evaluating Calamares in pre-release builds:
 - [Drauger OS](https://draugeros.org/)
 - [Frugalware](https://frugalware.org/)
 - [Maui](http://www.maui-project.org/)
-- [Parabola](https://www.parabola.nu/)
 - [PCLinuxOS](http://www.pclinuxos.com/)
 
 Operating systems that ship Calamares in their package repositories for third-party derivatives to use:
