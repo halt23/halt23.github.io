@@ -3,7 +3,7 @@ published: true
 layout: post
 title: "Calamares Site and Summer"
 ---
-The [Calamares website]((https://calamares.io/) has migrated entirely
+The [Calamares website](https://calamares.io/) has migrated entirely
 to GitHub pages. Previously it used some tiny hosting to forward
 requests, but this is no longer necessary. This **does** mean that
 the certificate for the site has changed, and on the 24th June at
