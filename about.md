@@ -89,4 +89,4 @@ For a complete list of dependencies, see [the README file](https://github.com/ca
 
 IRC: #calamares on chat.freenode.net.  
 <!-- Mailing list: [calamares-dev@googlegroups.com](mailto:calamares-dev@googlegroups.com)   -->
-Bugs: [Calamares bugs and feature requests](https://github.com/calamares/calamares/issues)
+Bugs: [Calamares issues, bugs and feature requests](https://github.com/calamares/calamares/issues)
