@@ -24,6 +24,27 @@ Calamares is not a Manjaro Linux installer, or a KaOS installer, or a Maui insta
 
 Calamares does not aim to be the ultimate "standard" installer of the Linux desktop. Many distributions already have more mature system installer solutions, but some don't, and that's where Calamares can be of use.
 
+## What does Calamares look like
+
+Since Calamares is designed to be customized, themed and branded by individual distributions,
+it can look very different when used by specific distributions. There will be distinct
+color schemes, welcome graphics, and while-you-wait slideshows.
+It is very unlikely that you will encounter a "plain" version of Calamares.
+The source code **does** have a default configuration, which looks like these
+screenshots:
+
+<div>
+ <span>
+  <img src="/images/page-welcome.png" width=266 alt="Welcome page" />
+ <span>
+ <span>
+  <img src="/images/page-partition.png" width=266 alt="Partitioning page" />
+ <span>
+ <span>
+  <img src="/images/page-finished.png" width=266 alt="Finished page" />
+ <span>
+</div>
+
 ## Who develops Calamares
 
 Calamares is maintained by [the Calamares team](/team/). Most of us are also [KDE](https://kde.org) developers, and we have received contributions from [BBQLinux](http://bbqlinux.org/), [Fedora](https://fedoraproject.org/), [KaOS](http://kaosx.us/), [Kubuntu](http://kubuntu.org), [Manjaro](http://manjaro.org/), [Maui](http://www.maui-project.org/), [Netrunner](http://www.netrunner.com/) and [OpenMandriva](https://www.openmandriva.org/) developers as well.
