@@ -34,9 +34,9 @@ The source code **does** have a default configuration, which looks like these
 screenshots:
 
 <div>
-<span><img src="/images/page-welcome.png" width=266 alt="Welcome page" /></span>
-<span><img src="/images/page-partition.png" width=266 alt="Partitioning page" /></span>
-<span><img src="/images/page-finished.png" width=266 alt="Finished page" /></span>
+  <img src="/images/page-welcome.png" width="266" alt="Welcome page">
+  <img src="/images/page-partition.png" width="266" alt="Partitioning page">
+  <img src="/images/page-finished.png" width="266" alt="Partitioning page">
 </div>
 
 ## Who develops Calamares
