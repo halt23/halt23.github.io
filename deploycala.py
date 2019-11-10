@@ -371,6 +371,7 @@ def main():
     parser.add_argument("-F", "--full-ide", action="store_true", default=False, dest="full_ide",
                         help="install IDE and support files")
     parser.add_argument("--depth", nargs=1, default=None, dest="depth", help="Reduce the size of the git checkout")
+    parser.add_argument("--deps-only", action="store_true", dest="deps_only", help="Only install the dependencies (implies -n -N)")
 
     args = parser.parse_args()
 
@@ -379,6 +380,10 @@ def main():
     elif isinstance(args.depth, str):
         args.depth = int(args.depth)
     # else fail with a type error later
+
+    if args.deps_only:
+        args.noupgrade = True
+        args.noupdate = True
 
     if not args.noupdate:
         update_self()
@@ -429,6 +434,9 @@ def main():
         dnf_update(args.noupgrade)
     else:
         bail("no package manager found.")
+
+    if args.deps_only:
+        return 0
 
     branch = args.branch;
     if not branch:
