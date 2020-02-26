@@ -48,7 +48,7 @@ url: https://calamares.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "https://calamares.io"
+# baseurl: "https://calamares.io"
 
 # Pagination
 # Set the number of posts per page
@@ -76,7 +76,7 @@ sass:
 # Use the following plug-ins
 gems:
   - jemoji # Emoji please!
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  # - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-paginate
 
 # Exclude these files from your production _site

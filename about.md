@@ -75,13 +75,13 @@ Operating systems that already ship Calamares:
 - [Pisi Linux](https://www.pisilinux.org/)
 - [Redcore Linux](http://redcorelinux.org/)
 - [Sabayon](https://www.sabayon.org/)
+- [Salient OS](https://salientos.github.io/)
 - [Siduction](https://siduction.org/)
 - [SwagArch](https://swagarch.gitlab.io/)
 - [Tanglu](http://tanglu.org/)
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
-- [Drauger OS](https://draugeros.org/)
 - [Frugalware](https://frugalware.org/)
 - [Maui](http://www.maui-project.org/)
 - [PCLinuxOS](http://www.pclinuxos.com/)
