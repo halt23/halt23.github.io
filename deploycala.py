@@ -270,6 +270,35 @@ def zypper_update(noupgrade):
         os.system("sudo zypper update -y")
     os.system("sudo zypper install -y -l " + " ".join(packages))
 
+
+def apk_update(noupgrade):
+    packages = generic_packages + [
+        "g++",
+        "qt5-qtbase-dev",
+        "qt5-qttools-dev",
+        "qt5-qtsvg-dev",
+        "qt5-qtdeclarative-dev",
+        "qt5-qtwebengine-dev",
+        "yaml-cpp-dev",
+        "polkit-qt-1-dev",
+        "kservice-dev",
+        "kpackage-dev",
+        "kparts-dev",
+        "kcrash-dev",
+        "kpmcore-dev",
+        "plasma-framework-dev",
+        "libpwquality-dev",
+        "parted-dev",
+        "python3-dev",
+        "boost-dev",
+        "boost-python3",
+        "libatasmart-dev"
+        ]
+    os.system("sudo apk update")
+    if not noupgrade:
+        os.system("sudo apk upgrade --available")
+    os.system("sudo apk add " + " ".join(packages))
+
 def setup_sudo_gdb():
     os.system("sudo touch /usr/bin/sudo-gdb")
     os.system("sudo chmod a+rwx /usr/bin/sudo-gdb")
@@ -432,6 +461,9 @@ def main():
     elif shutil.which("dnf"):
         message("\tusing dnf.")
         dnf_update(args.noupgrade)
+    elif shutil.which("apk"):
+        message("\tusing apk.")
+        apk_update(args.noupgrade)
     else:
         bail("no package manager found.")
 
