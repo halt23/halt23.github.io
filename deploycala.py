@@ -200,9 +200,9 @@ def pacman_update(noupgrade):
         "qt5-xmlpatterns"
         ]
     if noupgrade:
-        os.system("sudo pacman -Sy --noconfirm --needed --force " + " ".join(packages))
+        os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
     else:
-        os.system("sudo pacman -Syu --noconfirm --needed --force " + " ".join(packages))
+        os.system("sudo pacman -Syu --noconfirm --needed " + " ".join(packages))
 
 
 def apt_update(noupgrade):
@@ -413,7 +413,7 @@ def main():
         has_icecream = setup_icecream()
     elif shutil.which("pacman"):
         pacman_mirrors()
-        os.system("sudo pacman -Sy --noconfirm --needed --force yaourt || true")
+        os.system("sudo pacman -Sy --noconfirm --needed yaourt || true")
         if shutil.which("yaourt"):
             message("\tusing yaourt.")
             yaourt_update(args.noupgrade)
