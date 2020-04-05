@@ -47,6 +47,10 @@ import shutil
 import subprocess
 
 
+### COLORS AND LOGGING
+#
+#
+
 BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE = range(8)
 
 #following from Python cookbook, #475186
@@ -92,6 +96,10 @@ if not callable(getattr(shutil, "which", None)):
     bail("deploycala needs shutil.which")
 
 
+
+### FETCH AND SELF-UPDATE
+#
+#
 if shutil.which("curl"):
     def fetch(url, target):
         fetcher = shutil.which("curl")
@@ -126,10 +134,27 @@ def update_self():
     os.execv(sys.executable, myargs)
 
 
-def pacman_mirrors():
-    if shutil.which("pacman-mirrors"):
-        os.system("sudo pacman-mirrors -c Germany")
+def get_file_if_not_exists(source, target):
+    if not os.path.exists(target):
+        if fetch(source, target) == 0:
+            message('Fetched ' + target)
+        else:
+            warning('cannot fetch ' + target)
+    else:
+        message('File ' + target + ' already exists, won\'t update.')
 
+
+
+### PACKAGE INSTALLATION
+#
+# This section defines a handful of *_update() functions, one
+# for each package manager we're likely to encounter. The update
+# function installs packages -- generic_packages seem to have
+# names common to all distro's, everything else is hidden in
+# logic per package-manager.
+#
+# One extra-special case is KaOS, which uses pacman but is not
+# an Arch derivative -- see pacman_update().
 
 # Package names shared by all
 generic_packages = [
@@ -203,6 +228,12 @@ def pacman_update(noupgrade):
         os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
     else:
         os.system("sudo pacman -Syu --noconfirm --needed " + " ".join(packages))
+
+
+def pacman_mirrors():
+    """Switch mirrors (for yaourt and pacman-based systems)"""
+    if shutil.which("pacman-mirrors"):
+        os.system("sudo pacman-mirrors -c Germany")
 
 
 def apt_update(noupgrade):
@@ -299,6 +330,12 @@ def apk_update(noupgrade):
         os.system("sudo apk upgrade --available")
     os.system("sudo apk add " + " ".join(packages))
 
+
+### IDE CONFIGURATION
+#
+# This section is for setting up the IDE. As of 2020 it hasn't been
+# exercised / used for some time, so I don't know if it works.
+
 def setup_sudo_gdb():
     os.system("sudo touch /usr/bin/sudo-gdb")
     os.system("sudo chmod a+rwx /usr/bin/sudo-gdb")
@@ -306,26 +343,18 @@ def setup_sudo_gdb():
     file.write('#!/bin/bash\nsudo gdb $@\n')
     file.close()
 
-def inplace_change(filename, old_string, new_string):
-    if os.path.exists(filename):
-        s=open(filename).read()
-        if old_string in s:
-                s=s.replace(old_string, new_string)
-                f=open(filename, 'w')
-                f.write(s)
-                f.flush()
-                f.close()
-
-def get_file_if_not_exists(source, target):
-    if not os.path.exists(target):
-        if fetch(source, target) == 0:
-            message('Fetched ' + target)
-        else:
-            warning('cannot fetch ' + target)
-    else:
-        message('File ' + target + ' already exists, won\'t update.')
 
 def setup_qtcreator():
+    def inplace_change(filename, old_string, new_string):
+        if os.path.exists(filename):
+            s=open(filename).read()
+            if old_string in s:
+                    s=s.replace(old_string, new_string)
+                    f=open(filename, 'w')
+                    f.write(s)
+                    f.flush()
+                    f.close()
+
     os.chdir(os.path.expanduser('~'))
     prefix = 'https://calamares.io/deploycala.d/'
     getfiles = dict([
@@ -341,6 +370,7 @@ def setup_qtcreator():
         get_file_if_not_exists(src, dest)
         inplace_change(dest, "/home/netrunner", os.path.expanduser('~'))
 
+
 def setup_icecream():
     os.system('bash -c \'echo "export PATH=/usr/lib/icecream/libexec/icecc/bin:$PATH" >> ~/.bashrc\'')
     os.system('bash -c \'source ~/.bashrc\'')
@@ -352,6 +382,11 @@ def setup_icecream():
     os.system('which g++')
     has_icecream = "icecream" in str(subprocess.check_output(["which", "g++"])).strip()
     return has_icecream
+
+
+### COMPILING CALAMARES
+#
+#
 
 # Courtesy of phihag on Stack Overflow,
 # http://stackoverflow.com/questions/1006289/how-to-find-out-the-number-of-cpus-using-python
