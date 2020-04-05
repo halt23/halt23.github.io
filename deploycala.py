@@ -205,7 +205,6 @@ def pacman_update(noupgrade):
         "binutils",
         "fakeroot",
         "gcc",
-        "gcc-libs-multilib",
         "boost",
         "patch",
         "qt5-tools",
@@ -216,7 +215,6 @@ def pacman_update(noupgrade):
         "kparts",
         "qtcreator",
         "ack",
-        "qt5-webengine",
         "kpmcore",
         "qt5-location",
         "icu",
@@ -224,6 +222,27 @@ def pacman_update(noupgrade):
         "qt5-translations",
         "qt5-xmlpatterns"
         ]
+    
+    def detect_kaos():
+        try:
+            with open(*"/etc/os-release","r") as f:
+                return(any([line.startswith("ID=kaos") for line in f.readlines()])) 
+        except:
+            return False
+
+    # KaOS uses pacman, but is not Arch
+    archlike = not detect_kaos()
+    if archlike:
+        packages.extend([
+            "gcc-libs-multilib",
+            "qt5-webengine",
+        ])
+    else:
+        packages.extend([
+            "gcc-libs",
+            "qtwebengine"
+        ])
+
     if noupgrade:
         os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
     else:
