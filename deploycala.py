@@ -225,7 +225,7 @@ def pacman_update(noupgrade):
     
     def detect_kaos():
         try:
-            with open(*"/etc/os-release","r") as f:
+            with open("/etc/os-release","r") as f:
                 return(any([line.startswith("ID=kaos") for line in f.readlines()])) 
         except:
             return False
