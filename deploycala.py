@@ -187,7 +187,6 @@ def yaourt_update(noupgrade):
         "kservice",
         "kio",
         "kparts",
-        "qtcreator",
         "ack",
         "qt5-webengine"
         ]
@@ -213,7 +212,6 @@ def pacman_update(noupgrade):
         "kservice",
         "kio",
         "kparts",
-        "qtcreator",
         "ack",
         "kpmcore",
         "qt5-location",
