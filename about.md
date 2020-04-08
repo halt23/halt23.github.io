@@ -60,6 +60,7 @@ Operating systems that already ship Calamares:
 - [Bluestar Linux](http://bluestarlinux.sourceforge.net/)
 - [Chakra](https://chakralinux.org/)
 - [EndeavourOS](https://endeavouros.com/)
+- [Feren OS](https://ferenos.weebly.com/)
 - [GeckoLinux](http://geckolinux.github.io/)
 - [Hamara Linux](https://www.hamaralinux.org/)
 - [Kannolo](https://kannolo.sourceforge.io/) (Fedora Remix)
