@@ -4,7 +4,7 @@
 # === This file is part of Calamares - <http://github.com/calamares> ===
 #
 #   Copyright 2015, Teo Mrnjavac <teo@kde.org>
-#   Copyright 2017-2018, Adriaan de Groot <groot@kde.org>
+#   Copyright 2017-2018, 2020, Adriaan de Groot <groot@kde.org>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -347,6 +347,29 @@ def apk_update(noupgrade):
         os.system("sudo apk upgrade --available")
     os.system("sudo apk add " + " ".join(packages))
 
+def freebsd_update(noupgrade):
+    packages = [
+        "git",
+        "cmake",
+        "kf5-extra-cmake-modules",
+        "kf5-kcoreaddons",
+        "qt5-buildtools",
+        "qt5-concurrent",
+        "qt5-qmake",
+        "qt5-quickcontrols2",
+        "qt5-svg",
+        "polkit-qt-1",
+        "py37-boost-libs",
+        "yaml-cpp",
+        ]
+    if not shutil.which("sudo"):
+        bail("You must first install and configure sudo\n    (e.g. pkg install sudo as root, and then add suitable users to /usr/local/etc/sudo.conf)")
+
+    os.system("sudo pkg update")
+    if not noupgrade:
+        os.system("sudo pkg upgrade")
+    os.system("sudo pkg install -y " + " ".join(packages))
+
 
 ### IDE CONFIGURATION
 #
@@ -516,6 +539,9 @@ def main():
     elif shutil.which("apk"):
         message("\tusing apk.")
         apk_update(args.noupgrade)
+    elif "freebsd" in sys.platform and shutil.which("pkg"):
+        message("\tusing FreeBSD pkg.")
+        freebsd_update(args.noupgrade)
     else:
         bail("no package manager found.")
 
