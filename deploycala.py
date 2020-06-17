@@ -461,7 +461,7 @@ def available_cpu_count():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("branch", nargs="?", default="master",
+    parser.add_argument("branch", nargs="?", default="calamares",
                         help="the branch to checkout and build")
     parser.add_argument("-n", "--noupgrade", action="store_true", dest="noupgrade",
                         help="do not upgrade all the packages on the system before building")
@@ -550,7 +550,7 @@ def main():
 
     branch = args.branch;
     if not branch:
-        branch = "master"
+        branch = "calamares"
 
     if os.path.isdir("calamares"):
         if args.nopull:
