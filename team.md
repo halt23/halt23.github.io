@@ -7,7 +7,7 @@ published: true
 ---
 
 [**Adriaan de Groot**](https://github.com/adriaandegroot)  
-Maintainer | Software developer for Blue Systems
+Maintainer [GPG Key](pk-7FEA3DA6169C77D6.txt) | Software developer for Blue Systems
 
 ## Contributors
 
@@ -57,4 +57,4 @@ Previous Maintainer
 
 ---
 
-Calamares development is sponsored by [Blue Systems](http://www.blue-systems.com/).
+Calamares development is sponsored by [Blue Systems](https://www.blue-systems.com/).
