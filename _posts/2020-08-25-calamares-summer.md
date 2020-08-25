@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: "Calamares Early Summer"
+title: "Calamares Late Summer"
 ---
 
 
