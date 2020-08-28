@@ -66,6 +66,7 @@ Operating systems that already ship Calamares:
 - [Kannolo](https://kannolo.sourceforge.io/) (Fedora Remix)
 - [KaOS](http://kaosx.us/)
 - [KDE Neon](https://neon.kde.org/)
+- [Laxer OS](https://www.laxeros.com/)
 - [Lubuntu](http://lubuntu.me/)
 - [Manjaro](http://manjaro.org/)
 - [Neptune](https://neptuneos.com/en/start-page.html)
