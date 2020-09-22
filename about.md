@@ -16,7 +16,9 @@ Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribut
 
 Calamares includes an advanced partitioning feature, with support for both manual and automated partitioning operations. It is the first installer with an automated "Replace Partition" option, which makes it easy to reuse a partition over and over for distribution testing.
 
-Got a Linux distribution but no system installer? [Grab Calamares](https://github.com/calamares/calamares), mix and match any number of [Calamares modules](https://github.com/calamares/calamares/tree/master/src/modules) (or write your own in Python or C++), throw together some [branding](https://github.com/calamares/calamares/tree/master/src/branding), package it up and you are ready to ship!
+Got a Linux distribution but no system installer? [Grab Calamares](https://github.com/calamares/calamares), mix and match any number of [Calamares modules](https://github.com/calamares/calamares/tree/calamares/src/modules) (or write your own in Python or C++), throw together some [branding](https://github.com/calamares/calamares/tree/calamares/src/branding), package it up and you are ready to ship!
+The [Calamares extensions](https://github.com/calamares/calamares-extensions)
+repository holds more branding examples and specialized modules.
 
 ## What Calamares is not
 
@@ -97,14 +99,22 @@ Operating systems that ship Calamares in their package repositories for third-pa
 
 ## What is Calamares made of
 
-Calamares is mostly written in C++11, with Qt 5 as general purpose library and UI toolkit.
+Calamares is mostly written in C++14, with Qt 5 (5.9 or later) as general 
+purpose library and UI toolkit.
 
-Calamares is modular by design, and Python 3 was chosen as the main scripting language. The Python 3 interface is implemented with Boost.Python, and all Calamares configuration is done in YAML.
+Calamares is modular by design, and Python 3 was chosen as the main 
+scripting language. The Python 3 interface is implemented with Boost.Python, 
+and all Calamares configuration is done in YAML.
 
-For a complete list of dependencies, see [the README file](https://github.com/calamares/calamares/blob/master/README.md).
+For a complete list of dependencies, see 
+[the README file](https://github.com/calamares/calamares/blob/calamares/README.md).
 
 ## Contact us
 
-IRC: #calamares on chat.freenode.net.  
+- IRC: #calamares on chat.freenode.net.  
 <!-- Mailing list: [calamares-dev@googlegroups.com](mailto:calamares-dev@googlegroups.com)   -->
-Bugs: [Calamares issues, bugs and feature requests](https://github.com/calamares/calamares/issues)
+- Bugs: [Calamares issues, bugs and feature requests](https://github.com/calamares/calamares/issues)
+- GPG: Calamares release tarballs are signed with a [GPG signing-subkey](pk-7FEA3DA6169C77D6.txt):
+  - Since Calamares 3.2.3, E7C31EAE243D798415BCEF00128F00873E05AF1D
+  - Since Calamares 3.2.26, 57E14BD1CD6C198BC11BF18D61A7D26277E4D0DB (one release only!)
+  - Since Calamares 3.2.27, 86B8EDB6ED8E3F96A9BAECB5CFDDC96F12B1915C (**current**)
