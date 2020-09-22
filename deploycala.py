@@ -208,10 +208,6 @@ def pacman_update(noupgrade):
         "patch",
         "qt5-tools",
         "yaml-cpp",
-        "kiconthemes",
-        "kservice",
-        "kio",
-        "kparts",
         "ack",
         "kpmcore",
         "qt5-location",
@@ -220,7 +216,22 @@ def pacman_update(noupgrade):
         "qt5-translations",
         "qt5-xmlpatterns"
         ]
-    
+    # Manjaro devel builds variously ship git builds,
+    # which conflict with the (downgraded) non- git versions.
+    possibly_git_packages = [
+        "kiconthemes",
+        "kservice",
+        "kio",
+        "kparts",
+        ]
+
+    def detect_git_packages():
+        try: 
+            v = subprocess.check_output(["pacman", "-Q", possibly_git_packages[0]])
+            return b'-git' in v
+        except CalledProcessError:
+            return false
+
     def detect_kaos():
         try:
             with open("/etc/os-release","r") as f:
@@ -228,18 +239,23 @@ def pacman_update(noupgrade):
         except:
             return False
 
-    # KaOS uses pacman, but is not Arch
-    archlike = not detect_kaos()
-    if archlike:
-        packages.extend([
-            "gcc-libs-multilib",
-            "qt5-webengine",
-        ])
-    else:
+    if detect_kaos():
+        # KaOS uses pacman, but is not Arch
         packages.extend([
             "gcc-libs",
             "qtwebengine"
         ])
+    else:
+        # Regular arch-based
+        packages.extend([
+            "gcc-libs-multilib",
+            "qt5-webengine",
+        ])
+
+    if detect_git_packages():
+        packages.extend([x + "-git" for x in possibly_git_packages])
+    else:
+        packages.extend(possibly_git_packages)
 
     if noupgrade:
         os.system("sudo pacman -Sy --noconfirm --needed " + " ".join(packages))
