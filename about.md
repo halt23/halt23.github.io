@@ -1,12 +1,14 @@
 ---
-layout: page
+layout: splash
 title: About
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.8"
+  overlay_image: /images/banner2.png
 permalink: /about/
 published: true
 # Trailing whitespace is important in this file!
 ---
-
-The idea of Calamares arose from a desire of several independent Linux distributions to come together and work on a shared system installer. Instead of everyone working on their own implementation and forking forks of forks, why not work together on something that can be used by many?
 
 ## What is Calamares
 

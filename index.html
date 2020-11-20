@@ -1,52 +1,122 @@
 ---
-layout: default
-published: true
+title: "Calamares"
+layout: splash
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.8"
+  overlay_image: /images/banner2.png
+  actions:
+    - label: "<i class='fas fa-info-circle'></i> Intro"
+      url: "#one"
+    - label: "<i class='fas fa-image'></i> Gallery"
+      url: "#gallery"
+    - label: "<i class='far fa-newspaper'></i> Latest News "
+      url: "#news"
+caption: "Locale Module"
+excerpt: "Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic"
+intro:
+  - excerpt: 'The idea of Calamares arose from a desire of several independent Linux distributions to come together and work on a shared system installer. Instead of everyone working on their own implementation and forking forks of forks, why not work together on something that can be used by many? '
+feature_row:
+  - image_path: /images/gallery/adjust.svg
+    alt: "placeholder image 1"
+    title: "What is Calamares"
+    excerpt: "Calamares is an installer framework. By design it is very customizable, in order to satisfy a wide variety of needs and use cases. Calamares aims to be easy, usable & beautiful."
+    url: "/about#what-is-calamares"
+    btn_label: "Read More"
+    btn_class: "btn--inverse btn--small"
+  - image_path: /images/gallery/chat.svg
+    alt: "placeholder image 2"
+    title: "What Calamares is not"
+    excerpt: "Calamares is not a Manjaro Linux installer, or a KaOS installer, or a Maui installer, or even an installer for Arch Linux based distributions. Calamares is an independent product."
+    url: "/about#what-calamares-is-not"
+    btn_label: "Read More"
+    btn_class: "btn--inverse btn--small"
+  - image_path: /images/gallery/camera.svg
+    title: "Calamares look"
+    excerpt: "Since Calamares is designed to be customized, themed and branded by individual distributions, it can look very different when used by specific distributions."
+    url: "/about/#what-does-calamares-look-like"
+    btn_label: "Read More"
+    btn_class: "btn--inverse btn--small"
+gallery:
+  - url: /images/2020/arco_welcome.png
+    image_path: /images/2020/arco_welcome-th.png
+    alt: "Welcome Screen"
+    title: "Arco Linux - Welcome Screen"
+  - url: /images/2020/arco_netinstall.png
+    image_path: /images/2020/arco_netinstall-th.png
+    alt: "Arco Linux - Netinstall Screen"
+    title: "Arco Linux - Netinstall Screen"
+  - url: /images/2020/arco_partition.png
+    image_path: /images/2020/arco_partition-th.png
+    alt: "Arco Linux - Partition Screen"
+    title: "Arco Linux - Partition Screen"
+  - url: /images/2020/kaos_welcome.png
+    image_path: /images/2020/kaos_welcome-th.png
+    alt: "KaOS Welcome Screen"
+    title: "KaOS Welcome Screen"
+  - url: /images/2020/kaos_locale.png
+    image_path: /images/2020/kaos_locale-th.png
+    alt: "KaOS Locale Module in QML"
+    title: "KaOS Locale Module in QML"
+  - url: /images/2020/kaos_packages.png
+    image_path: /images/2020/kaos_packages-th.png
+    alt: "KaOS Package Chooser Module"
+    title: "KaOS Package Chooser Module"
+  - url: /images/2020/neon_welcome.png
+    image_path: /images/2020/neon_welcome-th.png
+    alt: "Welcome Screen"
+    title: "KDE Neon - Welcome Screen"
+  - url: /images/2020/neon_partition.png
+    image_path: /images/2020/neon_partition-th.png
+    alt: "KDE Neon - Partition Screen"
+    title: "KDE Neon - Partition Screen"
+  - url: /images/2020/neon_slide.png
+    image_path: /images/2020/neon_slide-th.png
+    alt: "KDE Neon - Slideshoe"
+    title: "KDE Neon - Slideshow"
+  - url: /assets/images/unsplash-gallery-image-1.jpg
+    image_path: /assets/images/unsplash-gallery-image-1-th.jpg
+    alt: "placeholder image 7"
+    title: "Image 7 title caption"
+  - url: /assets/images/unsplash-gallery-image-2.jpg
+    image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+    alt: "placeholder image 8"
+    title: "Image 8 title caption"
+  - url: /assets/images/unsplash-gallery-image-3.jpg
+    image_path: /assets/images/unsplash-gallery-image-3-th.jpg
+    alt: "placeholder image 9"
+    title: "Image 9 title caption"
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">    
-      
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<!--<p class="release-info"></p>
+<a class="download" href="https://github.com/calamares/calamares/releases/latest">Download</a>-->
 
-      <div class="entry">
-        {% if post.content contains '<!--more-->' %}
-          {{ post.content | split:'<!--more-->' | first }}
-        {% else %}
-          {{ post.excerpt }}
-        {% endif %}
-        <div class="date">
-    		Written on {{ post.date | date: "%B %e, %Y" }}
-  		  </div>
-      </div>
-      
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="feature__wrapper feature__item--center">
+    <!--<a href="https://api.github.com/repos/calamares/calamares/releases/latest" class="btn btn--primary"><i class='fas fa-download'></i> Download"</a>-->
+    <a href="https://github.com/calamares/calamares/releases"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/calamares/calamares?style=social"></a>
+    <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/calamares/calamares?style=social">
 </div>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
+{% include feature_row id="intro" type="center" %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', page }}">{{ page }}</a>
+<div id="one">
+  {% include feature_row %}
+</div>
+
+<div class="feature__wrapper" id="gallery">
+  <h1>Gallery</h1>
+  {% include gallery %}
+</div>
+
+<div class="feature__wrapper" id="news">
+  <h2>Latest News Article:</h2>
+  {% assign post = site.posts.first %}
+  {% assign content = post.excerpt %}
+  <h4 class="entry-title">
+    {% if post.title %}
+        {{ post.title }}
     {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
+    </h4>
+<div class="entry-content">{{ content | split:'<!--more-->' }}</div>
+  <a href="{{ root_url }}{{ post.url }}" class="btn btn--inverse">Read More</a>
 </div>
-{% endif %}

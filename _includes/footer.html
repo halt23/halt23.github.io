@@ -1,0 +1,23 @@
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    {% if site.data.ui-text[site.locale].follow_label %}
+      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+    {% endif %}
+
+    {% if site.footer.links %}
+      {% for link in site.footer.links %}
+        {% if link.label and link.url %}
+          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+  </ul>
+</div>
+
+<aside class="back_to__top">
+<a href="#site-nav"> <i class="fas fa-angle-double-up fa-2x"></i></a>
+</aside>
+
+<div class="page__footer-copyright">&copy; 2014 - {{ site.time | date: '%Y' }} . {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://www.blue-systems.com/" rel="nofollow">Blue Systems</a>.</div>
