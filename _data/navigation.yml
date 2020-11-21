@@ -2,7 +2,7 @@
 main:
   - title: "<i class='fas fa-newspaper'></i> News"
     url: /news/
-  - title: "<i class='fas fa-download'></i> About"
+  - title: "<i class='fas fa-sitemap'></i> About"
     url: /about/
   - title: "<i class='fab fa-github'></i> Code"
     url: "https://github.com/calamares/calamares"
@@ -10,3 +10,24 @@ main:
     url: "https://github.com/calamares/calamares/issues"
   - title: "<i class='fas fa-graduation-cap'></i> Wiki"
     url: "https://github.com/calamares/calamares/wiki"
+
+# sidebar menu
+links:
+  - title: "<i class='fas fa-download fa-2x'></i> Download"
+    url: "https://github.com/calamares/calamares/releases"
+  - title: "<i class='fas fa-comments fa-2x'></i> IRC"
+    url: "https://webchat.freenode.net/?channel=#calamares?nick=guest%7C"
+  - title: "<i class='fab fa-octopus-deploy fa-2x'></i> Deploying"
+    children:
+      - title: "Deploy Guide"
+        url: "https://github.com/calamares/calamares/wiki/Deploy-Guide"
+      - title: "Dependencies"
+        url: "https://github.com/calamares/calamares/blob/calamares/CONTRIBUTING.md#dependencies"
+      - title: "Branding"
+        url: "https://github.com/calamares/calamares/blob/calamares/src/branding/README.md"
+      - title: "Modules"
+        url: "https://github.com/calamares/calamares/blob/calamares/src/modules/README.md"
+      - title: "Extensions"
+        url: "https://github.com/calamares/calamares-extensions"
+  - title: "<i class='fas fa-users-cog fa-2x'></i> Team"
+    url: /team/

@@ -1,10 +1,14 @@
 ---
-layout: splash
+layout: single
 title: About
 header:
   overlay_color: "#000"
   overlay_filter: "0.8"
   overlay_image: /images/banner2.png
+toc: true
+toc_label: "Content"
+sidebar:
+  nav: "links"
 permalink: /about/
 published: true
 # Trailing whitespace is important in this file!
@@ -47,12 +51,14 @@ screenshots:
 </div>
 
 ## Who develops Calamares
+{: .offset}
 
 Calamares is maintained by [the Calamares team](/team/). Most of us are also [KDE](https://kde.org) developers, and we have received contributions from [BBQLinux](http://bbqlinux.org/), [Fedora](https://fedoraproject.org/), [KaOS](http://kaosx.us/), [Kubuntu](http://kubuntu.org), [Manjaro](http://manjaro.org/), [Maui](http://www.maui-project.org/), [Netrunner](http://www.netrunner.com/) and [OpenMandriva](https://www.openmandriva.org/) developers as well.
 
 We gladly accept contributions from everyone, and we have no exclusive association with any Linux distribution. Calamares is not a KDE project, or a KaOS project, or a Manjaro project, we are just a bunch of people dumping some code on [GitHub](https://github.com/calamares).
 
 ## Who ships Calamares
+{: .offset}
 
 Many Linux distributions are in varying stages of adopting Calamares as their primary system installer.
 
@@ -64,7 +70,7 @@ Operating systems that already ship Calamares:
 - [Argent Linux](https://rogentos.ro/#Portfolio)
 - [BBQLinux](http://bbqlinux.org/)
 - [BlackPanther OS](http://www.blackpantheros.eu/)
-- [Bluestar Linux](http://bluestarlinux.sourceforge.net/)
+- [Bluestar Linux](https://sourceforge.net/projects/bluestarlinux/)
 - [Chakra](https://chakralinux.org/)
 - [EndeavourOS](https://endeavouros.com/)
 - [Feren OS](https://ferenos.weebly.com/)
@@ -86,8 +92,6 @@ Operating systems that already ship Calamares:
 - [Sabayon](https://www.sabayon.org/)
 - [Salient OS](https://salientos.github.io/)
 - [Siduction](https://siduction.org/)
-- [SwagArch](https://swagarch.gitlab.io/)
-- [Tanglu](http://tanglu.org/)
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
@@ -103,6 +107,7 @@ Operating systems that ship Calamares in their package repositories for third-pa
 - [openSUSE](https://opensuse.org/) (from Leap 15)
 
 ## What is Calamares made of
+{: .offset}
 
 Calamares is mostly written in C++14, with Qt 5 (5.9 or later) as general 
 purpose library and UI toolkit.
@@ -115,6 +120,7 @@ For a complete list of dependencies, see
 [the README file](https://github.com/calamares/calamares/blob/calamares/README.md).
 
 ## Contact us
+{: .offset}
 
 - IRC: #calamares on chat.freenode.net.  
 <!-- Mailing list: [calamares-dev@googlegroups.com](mailto:calamares-dev@googlegroups.com)   -->

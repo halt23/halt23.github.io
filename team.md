@@ -1,10 +1,12 @@
 ---
-layout: splash
+layout: single
 title: The Calamares team
 header:
   overlay_color: "#000"
   overlay_filter: "0.8"
   overlay_image: /images/banner2.png
+sidebar:
+  nav: "links"
 permalink: /team/
 published: true
 # Trailing whitespace is important in this file!
