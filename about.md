@@ -4,11 +4,24 @@ title: About
 header:
   overlay_color: "#000"
   overlay_filter: "0.8"
-  overlay_image: /images/banner2.png
+  overlay_image: /images/banner.jpg
 toc: true
 toc_label: "Content"
 sidebar:
   nav: "links"
+gallery:
+  - url: /images/gallery/page-welcome.png
+    image_path: /images/gallery/page-welcome-th.png
+    alt: "Welcome Screen"
+    title: "Welcome Screen"
+  - url: /images/gallery/page-locale.png
+    image_path: /images/gallery/page-locale-th.png
+    alt: "Locale Screen"
+    title: "Locale Screen"
+  - url: /images/gallery/page-partition.png
+    image_path: /images/gallery/page-partition-th.png
+    alt: "Parttioning Screen"
+    title: "Partitioning Screen"
 permalink: /about/
 published: true
 # Trailing whitespace is important in this file!
@@ -44,10 +57,8 @@ It is very unlikely that you will encounter a "plain" version of Calamares.
 The source code **does** have a default configuration, which looks like these
 screenshots:
 
-<div>
-  <img src="/images/page-welcome.png" width="266" alt="Welcome page">
-  <img src="/images/page-partition.png" width="266" alt="Partitioning page">
-  <img src="/images/page-finished.png" width="266" alt="Partitioning page">
+<div class="">
+  {% include gallery %}
 </div>
 
 ## Who develops Calamares

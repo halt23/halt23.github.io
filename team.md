@@ -4,7 +4,7 @@ title: The Calamares team
 header:
   overlay_color: "#000"
   overlay_filter: "0.8"
-  overlay_image: /images/banner2.png
+  overlay_image: /images/banner.jpg
 sidebar:
   nav: "links"
 permalink: /team/
