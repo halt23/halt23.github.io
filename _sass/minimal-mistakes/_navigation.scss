@@ -609,3 +609,10 @@
   right: 2em;
   z-index: 10;
 }
+.offset:before { 
+    display: block; 
+    content: " "; 
+    height: 85px;      /* height of fixed element */
+        margin-top: -85px; /* negative margin of fixed element */  	
+        visibility: hidden; 
+}

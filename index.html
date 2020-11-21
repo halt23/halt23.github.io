@@ -99,16 +99,16 @@ gallery:
 
 {% include feature_row id="intro" type="center" %}
 
-<div id="one">
+<div id="one" class="offset">
   {% include feature_row %}
 </div>
 
-<div class="feature__wrapper" id="gallery">
+<div class="feature__wrapper offset" id="gallery">
   <h1>Gallery</h1>
   {% include gallery %}
 </div>
 
-<div class="feature__wrapper" id="news">
+<div class="feature__wrapper offset" id="news">
   <h2>Latest News Article:</h2>
   {% assign post = site.posts.first %}
   {% assign content = post.excerpt %}

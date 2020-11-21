@@ -11,6 +11,7 @@ published: true
 ---
 
 ## What is Calamares
+{: .offset}
 
 Calamares is an installer framework. By design it is very customizable, in order to satisfy a wide variety of needs and use cases.
 
@@ -23,15 +24,17 @@ The [Calamares extensions](https://github.com/calamares/calamares-extensions)
 repository holds more branding examples and specialized modules.
 
 ## What Calamares is not
+{: .offset}
 
 Calamares is not a Manjaro Linux installer, or a KaOS installer, or a Maui installer, or even an installer for Arch Linux based distributions. Calamares is an independent product. The Calamares team works closely with Linux distributors to provide the very best experience to their users.
 
 Calamares does not aim to be the ultimate "standard" installer of the Linux desktop. Many distributions already have more mature system installer solutions, but some don't, and that's where Calamares can be of use.
 
 ## What does Calamares look like
+{: .offset}
 
 Since Calamares is designed to be customized, themed and branded by individual distributions,
-it can look very different when used by specific distributions. There will be distinct
+it [can look very different](/#gallery) when used by specific distributions. There will be distinct
 color schemes, welcome graphics, and while-you-wait slideshows.
 It is very unlikely that you will encounter a "plain" version of Calamares.
 The source code **does** have a default configuration, which looks like these

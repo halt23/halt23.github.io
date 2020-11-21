@@ -17,6 +17,7 @@ permalink: /news/
 {% endif %}
 </h1>
 
+<p align="right"><b><small>{{ post.date | date: "%b %-d, %Y" }}</small></b></p>
 {{ content }}
 
 <div>
