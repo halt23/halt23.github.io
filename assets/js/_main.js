@@ -143,10 +143,12 @@ $(document).ready(function() {
             downloadCount += release.assets[i].download_count;
             }
             var date = Date(asset.updated_at);
-            var releaseInfo = release.name + " was uploaded " + date + " and downloaded " + downloadCount.toLocaleString() + " times.";
+            var releaseInfo = release.name + " was released " + date + " and downloaded " + downloadCount.toLocaleString() + " times.";
+            var tagInfo = "Download " + release.tag_name;
             $(".download").attr("href", asset.browser_download_url);
             $(".release-info").text(releaseInfo);
             $(".release-info").fadeIn("slow");
+            $(".tag-info").text(tagInfo);
         });
     }
 
