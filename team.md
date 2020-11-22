@@ -24,7 +24,7 @@ Siduction support
 [**Andrius Štikonas**](https://github.com/stikonas)
 Partitioning, KPMCore  
 [**Anke Boersma**](https://github.com/demmm)
-Various modules, KaOS support  
+Various modules, Website, KaOS support  
 **Arnaud Ferraris**
 Partitioning layout  
 [**Caio Jordão Carvalho**](https://github.com/cjlcarvalho)
