@@ -3,7 +3,7 @@
 {% assign postsByYear =
 site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 {% for year in postsByYear %}
-<h2>{{ year.name }}</h2>
+<h4>{{ year.name }} <i class='fas fa-chevron-down fa-xs'></i></h4>
     <ul>
     {% for post in year.items %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -13,3 +13,35 @@ site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 {% endfor %}
 </div>
 
+<script>
+    var atag = document.querySelector('.News-nav h4');
+
+    atag.addEventListener('click', on_click);
+    var x;
+
+    function on_click() {
+    var elem = document.querySelector('.News-nav .fas');
+    elem.classList.toggle("fa-chevron-up");
+    elem.classList.toggle("fa-chevron-down");
+    }
+</script>
+<script>
+    (function () {
+            // Index of default active menus on document.ready
+            var defaultActives = [ ];
+
+            var acc = document.querySelectorAll(".News-nav h4");
+            var i;
+            var atag = document.querySelector('#archive');
+
+            for (i = 0; i < acc.length; i++) {
+                    if (defaultActives.includes(i)) {
+                            acc[i].classList.add('active');
+                    }
+                    acc[i].addEventListener('click', function() {
+                            this.classList.toggle('active');
+                            this.classList.toggle("fa-chevron-up");
+                    });
+            }
+    })();
+</script>

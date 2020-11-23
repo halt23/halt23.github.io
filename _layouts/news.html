@@ -24,21 +24,3 @@ layout: default
     {{ content }}
   </div>
 </div>
-<script>
-    (function () {
-            // Index of default active menus on document.ready
-            var defaultActives = [ 0 ];
-
-            var acc = document.querySelectorAll(".News-nav h2");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-                    if (defaultActives.includes(i)) {
-                            acc[i].classList.add('active');
-                    }
-                    acc[i].addEventListener('click', function() {
-                            this.classList.toggle('active');
-                    });
-            }
-    })();
-</script>

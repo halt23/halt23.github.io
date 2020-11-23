@@ -76,14 +76,16 @@ gallery:
     title: "KDE Neon - Slideshow"
 ---
 
-<div class="feature__wrapper feature__item--center">
-    <a class="download tag-info btn btn--primary btn--small"><i class='fas fa-download'></i>></a>
+{% include feature_row id="intro" type="center" %}
+
+<div class="feature__wrapper text-center">
+    <div>
+        <a class="download tag-info btn btn--primary"><i class='fas fa-download'></i></a>
+    </div>
     <div>
         <small class="release-info"></small>
     </div>
 </div>
-
-{% include feature_row id="intro" type="center" %}
 
 <div id="one" class="offset">
   {% include feature_row %}
@@ -95,14 +97,16 @@ gallery:
 </div>
 
 <div class="feature__wrapper offset" id="news">
-  <h2>Latest News Article:</h2>
-  {% assign post = site.posts.first %}
+  <h2>Latest News:</h2>
+  {% assign index = true %}
+  {% for post in site.posts limit:3 %}
   {% assign content = post.excerpt %}
   <h4 class="entry-title">
     {% if post.title %}
         {{ post.title }}
     {% endif %}
-    </h4>
-<div class="entry-content">{{ content | split:'<!--more-->' }}</div>
+  </h4>
+  <div class="entry-content">{{ content | split:'<!--more-->' }}</div>
   <a href="{{ root_url }}{{ post.url }}" class="btn btn--inverse">Read More</a>
+  {% endfor %}
 </div>

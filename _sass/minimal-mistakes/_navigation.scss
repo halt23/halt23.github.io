@@ -503,9 +503,9 @@
   //float: left;
   width: 80%;
 }
-.News-nav h2 {
+.News-nav h4 {
   margin: 10px 0;
-  //font-family: 'Raleway';
+  //font-family: 'Lato';
   cursor: pointer;
 }
 .News-nav ul {
@@ -514,11 +514,11 @@
   list-style: none;
   font-size: 14px;
 }
-.News-nav h2 + ul {
+.News-nav h4 + ul {
         display: none;
 }
 
-.News-nav h2.active + ul {
+.News-nav h4.active + ul {
         display: block;
 }
 .News-nav a {
