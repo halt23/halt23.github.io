@@ -31,3 +31,5 @@ links:
         url: "https://github.com/calamares/calamares-extensions"
   - title: "<i class='fas fa-users-cog fa-2x'></i> Team"
     url: /team/
+  - title: "<i class='fas fa-globe fa-2x'></i> Translate"
+    url: "https://www.transifex.com/calamares/calamares/"
