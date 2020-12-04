@@ -17,7 +17,7 @@ links:
     url: "https://github.com/calamares/calamares/releases"
   - title: "<i class='fas fa-comments fa-2x'></i> IRC"
     url: "https://webchat.freenode.net/?channel=#calamares?nick=guest%7C"
-  - title: "<i class='fab fa-octopus-deploy fa-2x'></i> Deploying"
+  - title: "<i class='fas fa-stream fa-2x'></i> Deploying"
     children:
       - title: "Deploy Guide"
         url: "https://github.com/calamares/calamares/wiki/Deploy-Guide"
