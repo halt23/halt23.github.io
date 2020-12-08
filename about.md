@@ -27,6 +27,8 @@ published: true
 # Trailing whitespace is important in this file!
 ---
 
+The idea of Calamares arose from a desire of several independent Linux distributions to come together and work on a shared system installer. Instead of everyone working on their own implementation and forking forks of forks, why not work together on something that can be used by many?
+
 ## What is Calamares
 {: .offset}
 

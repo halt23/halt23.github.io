@@ -8,14 +8,12 @@ header:
   actions:
     - label: "<i class='fas fa-info-circle'></i> Intro"
       url: "#one"
-    - label: "<i class='fas fa-image'></i> Gallery"
-      url: "#gallery"
     - label: "<i class='far fa-newspaper'></i> Latest News "
       url: "#news"
 caption: "Locale Module"
 excerpt: "Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic"
 intro:
-  - excerpt: 'The idea of Calamares arose from a desire of several independent Linux distributions to come together and work on a shared system installer. Instead of everyone working on their own implementation and forking forks of forks, why not work together on something that can be used by many? '
+  - excerpt: ' '
 feature_row:
   - image_path: /images/gallery/adjust.svg
     alt: "placeholder image 1"
@@ -26,16 +24,16 @@ feature_row:
     btn_class: "btn--inverse btn--small"
   - image_path: /images/gallery/chat.svg
     alt: "placeholder image 2"
-    title: "What Calamares is not"
-    excerpt: "Calamares is not a Manjaro Linux installer, or a KaOS installer, or a Maui installer, or even an installer for Arch Linux based distributions. Calamares is an independent product."
-    url: "/about#what-calamares-is-not"
-    btn_label: "Read More"
+    title: "Knowledge Base"
+    excerpt: "Calamares has some user documentation for end-users, but most of what we have is for distro developers. The developer's guide contains information on building Calamares, on its design, and localization."
+    url: "https://github.com/calamares/calamares/wiki"
+    btn_label: "Wiki"
     btn_class: "btn--inverse btn--small"
   - image_path: /images/gallery/camera.svg
     title: "Calamares look"
-    excerpt: "Since Calamares is designed to be customized, themed and branded by individual distributions, it can look very different when used by specific distributions."
-    url: "/about/#what-does-calamares-look-like"
-    btn_label: "Read More"
+    excerpt: "Since Calamares is designed to be customized, themed and branded by individual distributions, it can look very different when used by specific distributions. Extensions contains some examples."
+    url: "https://github.com/calamares/calamares-extensions"
+    btn_label: "Extensions"
     btn_class: "btn--inverse btn--small"
 gallery:
   - url: /images/2020/arco_welcome.png
@@ -76,7 +74,7 @@ gallery:
     title: "KDE Neon - Slideshow"
 ---
 
-{% include feature_row id="intro" type="center" %}
+<!--{% include feature_row id="intro" type="center" %}-->
 
 <div class="feature__wrapper text-center">
     <div>
@@ -93,8 +91,8 @@ gallery:
   {% include feature_row %}
 </div>
 
-<div class="feature__wrapper offset" id="gallery">
-  <h1>Gallery</h1>
+<div class="offset" id="gallery">
+  
   {% include gallery %}
 </div>
 
