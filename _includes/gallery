@@ -9,8 +9,10 @@
 {% else %}
   {% if gallery.size == 2 %}
     {% assign gallery_layout = 'half' %}
-  {% elsif gallery.size >= 3 %}
+  {% elsif gallery.size == 3 %}
     {% assign gallery_layout = 'third' %}
+  {% elsif gallery.size >= 3 %}
+    {% assign gallery_layout = 'thumb' %}
   {% else %}
     {% assign gallery_layout = '' %}
   {% endif %}
