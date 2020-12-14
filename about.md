@@ -45,9 +45,19 @@ repository holds more branding examples and specialized modules.
 ## What Calamares is not
 {: .offset}
 
-Calamares is not a Manjaro Linux installer, or a KaOS installer, or a Maui installer, or even an installer for Arch Linux based distributions. Calamares is an independent product. The Calamares team works closely with Linux distributors to provide the very best experience to their users.
+Calamares is not an installer for any specific Linux distribution.
+It is **used** by Manjaro and KaOS and Maui and Netrunner Linux,
+but it isn't "the Manjaro installer".
+Calamares is an independent product. 
+The Calamares team works closely with Linux distributors to provide the 
+very best experience to their users.
 
-Calamares does not aim to be the ultimate "standard" installer of the Linux desktop. Many distributions already have more mature system installer solutions, but some don't, and that's where Calamares can be of use.
+Calamares does not aim to be the ultimate "standard" installer of the Linux 
+desktop. Many distributions already have more mature system installer 
+solutions, but some don't, and that's where Calamares can be of use.
+A herd of Arch derivatives uses Calamares, as does a family of Debian and
+Ubuntu spins, Fedora remixes and openSUSE flavors.
+
 
 ## What does Calamares look like
 {: .offset}
@@ -123,7 +133,7 @@ Operating systems that ship Calamares in their package repositories for third-pa
 ## What is Calamares made of
 {: .offset}
 
-Calamares is mostly written in C++14, with Qt 5 (5.9 or later) as general 
+Calamares is mostly written in C++17, with Qt 5 (5.9 or later) as general 
 purpose library and UI toolkit.
 
 Calamares is modular by design, and Python 3 was chosen as the main 
@@ -136,10 +146,9 @@ For a complete list of dependencies, see
 ## Contact us
 {: .offset}
 
-- IRC: #calamares on chat.freenode.net.  
-<!-- Mailing list: [calamares-dev@googlegroups.com](mailto:calamares-dev@googlegroups.com)   -->
+- IRC: [#calamares](https://webchat.freenode.net/?channel=#calamares?nick=guest%7C){:target="_blank"} on webchat.freenode.net.  
 - Bugs: [Calamares issues, bugs and feature requests](https://github.com/calamares/calamares/issues){:target="_blank"}
 - GPG: Calamares release tarballs are signed with a [GPG signing-subkey](pk-7FEA3DA6169C77D6.txt):
-  - Since Calamares 3.2.3, E7C31EAE243D798415BCEF00128F00873E05AF1D
-  - Since Calamares 3.2.26, 57E14BD1CD6C198BC11BF18D61A7D26277E4D0DB (one release only!)
+  - Calamares 3.2.3 - 3.2.25, E7C31EAE243D798415BCEF00128F00873E05AF1D
+  - Calamares 3.2.26, 57E14BD1CD6C198BC11BF18D61A7D26277E4D0DB (one release only!)
   - Since Calamares 3.2.27, 86B8EDB6ED8E3F96A9BAECB5CFDDC96F12B1915C (**current**)
