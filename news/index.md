@@ -22,6 +22,6 @@ permalink: /news/
 
 <div>
 {% for post in site.posts offset:1 limit:1%}
-    <a class="btn btn--inverse" href="{{ root_url }}{{ post.url }}">Next</a>
+    <a class="btn btn--inverse" href="{{ root_url }}{{ post.url }}">Back</a>
 {% endfor %}
 </div>
