@@ -19,6 +19,7 @@ Calamares is highly modular and configurable. This guide explains what Calamares
 {: .notice--warning}
 
 ### Common Modules
+{: .offset}
 
 For nearly all installations, and all configurations of Calamares, you will see these modules used.
 <figure class="intro">
@@ -36,6 +37,7 @@ For nearly all installations, and all configurations of Calamares, you will see 
 </figure>
 
 ### Optional Modules
+{: .offset}
 
 These are modules for unusual cases or special distributions, and you will probably not see them.
 

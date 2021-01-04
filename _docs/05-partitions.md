@@ -17,6 +17,7 @@ For both UEFI and BIOS systems, hovering over the respective info buttons will g
 {: .notice--info}
 
 ### Options
+{: .offset}
 
 This installer gives you four options to use.
 
@@ -29,18 +30,22 @@ Manual options:
  1. This method gives you the freedom to set any option, any filesystem and partition table, but leaves it entirely up to you to completely break the install too. **Make sure you know what you are doing**.
 
 ### Install alongside an existing partition
+{: .offset}
 
 After selecting which partition you want to shrink to create room for your install, you can drag in that partition to set the desired size.  Also shown here is the option to encrypt the system with password set.
 
 ### Replace an existing partition
+{: .offset}
 
 Once you select the partition you want to replace, the preview will show the `after` bar.  Also shown here is the option to encrypt the system with password set.
 
 ### Use the entire drive
+{: .offset}
 
 FAT32 EFI partition also created if the system is UEFI, with swap assigned if disk size allows and your distribution has a swap option set.  This will remove all data and installed systems from the selected drive.
 
 ### Manual partitioning
+{: .offset}
 
 If you want to completely clean the drive and start over or if this drive has no partition table at all yet (new media, virtualbox install), you have to make a decision what partitiontable to use. Default in the installer is GPT, ms-dos is the older option (still more commonly used for BIOS systems). Advantage of GPT, it can use virtual unlimited primary partitions (ms-dos is limited to four), is needed for drives larger than 2 Tb and is best for UEFI systems. If you choose to use GPT on a BIOS system, make sure to set it up correctly, with the needed 8 MB partition of unformatted space at the beginning of the drive and having the bios_grub flag assigned to that unformatted partition.  This setup cannot have a seperate /boot partition.
 
