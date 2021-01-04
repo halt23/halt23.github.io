@@ -10,8 +10,10 @@ main:
     url: "https://github.com/calamares/calamares/issues"
   - title: "<i class='fas fa-graduation-cap'></i> Wiki"
     url: "https://github.com/calamares/calamares/wiki"
+  - title: "<i class='fas fa-book'></i> Guide"
+    url: "/docs/users-guide/"
 
-# sidebar menu
+# sidebar about page
 links:
   - title: "<i class='fas fa-download fa-2x'></i> Download"
     url: "https://github.com/calamares/calamares/releases"
@@ -33,3 +35,47 @@ links:
     url: "https://www.transifex.com/calamares/calamares/"
   - title: "<i class='fas fa-comments fa-2x'></i> Talk"
     url: "https://webchat.freenode.net/?channel=#calamares?nick=guest%7C"
+
+# docs sidebar
+docs:
+  - title: Getting Started
+    children:
+      - title: "User's Guide"
+        url: /docs/users-guide/
+
+  - title: Common Modules
+    children:
+      - title: "Welcome"
+        url: /docs/welcome/
+      - title: "Location"
+        url: /docs/location/
+      - title: "Keyboard"
+        url: /docs/keyboard/
+      - title: "Partitions"
+        url: /docs/partitions/
+      - title: "Users"
+        url: /docs/users/
+      - title: "Summary"
+        url: /docs/summary/
+      - title: "Install"
+        url: /docs/install/
+      - title: "Finish"
+        url: /docs/finish/
+
+  - title: Optional Modules
+    children:
+      - title: "Modules for Packages"
+        url: /docs/packages/
+      - title: "Tracking"
+        url: /docs/tracking/
+      - title: "Modules for Info"
+        url: /docs/information/
+      - title: "Modules for Theming"
+        url: /docs/theming/
+
+  - title: Extras
+    children:
+      - title: "Reporting Issues"
+        url: /docs/issues/
+      - title: "Suggestions"
+        url: /docs/suggestions/
