@@ -3,6 +3,7 @@ title: "Tracking"
 permalink: /docs/tracking/
 excerpt: "This module is disabled by default, and its default configuration turns off all tracking as well."
 last_modified_at: 2021-01-04T15:19:22-04:00
+toc: false
 ---
 
 This module is disabled by default, and its default configuration turns off all tracking as well. No distribution is known to use it.

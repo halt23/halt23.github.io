@@ -32,7 +32,7 @@ For nearly all installations, and all configurations of Calamares, you will see 
         <li><a href="{{ site.baseurl }}/docs/install">Install</a></li>
         <li><a href="{{ site.baseurl }}/docs/finish">Finish</a></li>
     </ul>
-    <img src="https://raw.githubusercontent.com/wiki/calamares/calamares/img/sidebar.png" width="20%">
+    <img src="https://raw.githubusercontent.com/wiki/calamares/calamares/img/sidebar.png">
 </figure>
 
 ### Optional Modules

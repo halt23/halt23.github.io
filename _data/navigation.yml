@@ -51,7 +51,7 @@ docs:
         url: /docs/location/
       - title: "Keyboard"
         url: /docs/keyboard/
-      - title: "Partitions"
+      - title: "Partition"
         url: /docs/partitions/
       - title: "Users"
         url: /docs/users/
