@@ -1,52 +1,112 @@
 ---
-layout: default
-published: true
+title: "Calamares"
+layout: splash
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.8"
+  overlay_image: /images/banner.jpg
+  actions:
+    - label: "<i class='fas fa-info-circle'></i> Intro"
+      url: "#one"
+    - label: "<i class='far fa-newspaper'></i> Latest News "
+      url: "#news"
+caption: "Locale Module"
+excerpt: "Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic"
+intro:
+  - excerpt: ' '
+feature_row:
+  - image_path: /images/gallery/adjust.svg
+    alt: "placeholder image 1"
+    title: "What is Calamares"
+    excerpt: "Calamares is an installer framework. By design it is very customizable, in order to satisfy a wide variety of needs and use cases. Calamares aims to be easy, usable & beautiful while remaining independent of any particular Linux distribution."
+    url: "/about#what-is-calamares"
+    btn_label: "Read More"
+    btn_class: "btn--inverse btn--small"
+  - image_path: /images/gallery/chat.svg
+    alt: "placeholder image 2"
+    title: "Knowledge Base"
+    excerpt: "The Guide linked above has documentation for end-users, the wiki is mostly for distro developers. The developer's guide contains information on building Calamares, on its design, and localization."
+    url: "https://github.com/calamares/calamares/wiki"
+    btn_label: "Wiki"
+    btn_class: "btn--inverse btn--small"
+  - image_path: /images/gallery/camera.svg
+    title: "Calamares look"
+    excerpt: "Since Calamares is designed to be customized, themed and branded by individual distributions, it can look very different when used by specific distributions. A separate extensions package contains examples and custom modules."
+    url: "https://github.com/calamares/calamares-extensions"
+    btn_label: "Extensions"
+    btn_class: "btn--inverse btn--small"
+gallery:
+  - url: /images/2020/arco_welcome.png
+    image_path: /images/2020/arco_welcome-th.png
+    alt: "Welcome Screen"
+    title: "Arco Linux - Welcome Screen"
+  - url: /images/2020/arco_netinstall.png
+    image_path: /images/2020/arco_netinstall-th.png
+    alt: "Arco Linux - Netinstall Screen"
+    title: "Arco Linux - Netinstall Screen"
+  - url: /images/2020/arco_partition.png
+    image_path: /images/2020/arco_partition-th.png
+    alt: "Arco Linux - Partition Screen"
+    title: "Arco Linux - Partition Screen"
+  - url: /images/2020/kaos_welcome.png
+    image_path: /images/2020/kaos_welcome-th.png
+    alt: "KaOS Welcome Screen"
+    title: "KaOS Welcome Screen"
+  - url: /images/2020/kaos_locale.png
+    image_path: /images/2020/kaos_locale-th.png
+    alt: "KaOS Locale Module in QML"
+    title: "KaOS Locale Module in QML"
+  - url: /images/2020/kaos_packages.png
+    image_path: /images/2020/kaos_packages-th.png
+    alt: "KaOS Package Chooser Module"
+    title: "KaOS Package Chooser Module"
+  - url: /images/2020/neon_welcome.png
+    image_path: /images/2020/neon_welcome-th.png
+    alt: "Welcome Screen"
+    title: "KDE Neon - Welcome Screen"
+  - url: /images/2020/neon_partition.png
+    image_path: /images/2020/neon_partition-th.png
+    alt: "KDE Neon - Partition Screen"
+    title: "KDE Neon - Partition Screen"
+  - url: /images/2020/neon_slide.png
+    image_path: /images/2020/neon_slide-th.png
+    alt: "KDE Neon - Slideshoe"
+    title: "KDE Neon - Slideshow"
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">    
-      
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<!--{% include feature_row id="intro" type="center" %}-->
 
-      <div class="entry">
-        {% if post.content contains '<!--more-->' %}
-          {{ post.content | split:'<!--more-->' | first }}
-        {% else %}
-          {{ post.excerpt }}
-        {% endif %}
-        <div class="date">
-    		Written on {{ post.date | date: "%B %e, %Y" }}
-  		  </div>
-      </div>
-      
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<div class="feature__wrapper text-center">
+    <div>
+        <a class="download tag-info btn btn--primary"><i class='fas fa-download'></i></a>
+        <a class="ext-download ext-tag-info btn btn--primary"><i class='fas fa-download'></i></a>
+    </div>
+    <div>
+        <small class="release-info"></small></br>
+        <small class="ext-info"></small>
+    </div>
 </div>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
+<div id="one" class="offset">
+  {% include feature_row %}
+</div>
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ '/index.html' | prepend: site.baseurl }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', page }}">{{ page }}</a>
+<div class="offset" id="gallery">
+  
+  {% include gallery %}
+</div>
+
+<div class="feature__wrapper offset" id="news">
+  <h2>Latest News:</h2>
+  {% assign index = true %}
+  {% for post in site.posts limit:3 %}
+  {% assign content = post.excerpt %}
+  <h4 class="entry-title">
+    {% if post.title %}
+        {{ post.title }}
     {% endif %}
+  </h4>
+  <div class="entry-content">{{ content | split:'<!--more-->' }}</div>
+  <a href="{{ root_url }}{{ post.url }}" class="btn btn--inverse">Read More</a>
   {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
 </div>
-{% endif %}
