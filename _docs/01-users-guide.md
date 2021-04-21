@@ -28,7 +28,7 @@ For nearly all installations, and all configurations of Calamares, you will see 
         <li><a href="{{ site.baseurl }}/docs/location">Location</a></li>
         <li><a href="{{ site.baseurl }}/docs/keyboard">Keyboard</a></li>
         <li><a href="{{ site.baseurl }}/docs/partitions">Partitions</a></li>
-        <li><a href="{{ site.baseurl }}/docs/users">Usesrs</a></li>
+        <li><a href="{{ site.baseurl }}/docs/users">Users</a></li>
         <li><a href="{{ site.baseurl }}/docs/summary">Summary</a></li>
         <li><a href="{{ site.baseurl }}/docs/install">Install</a></li>
         <li><a href="{{ site.baseurl }}/docs/finish">Finish</a></li>
