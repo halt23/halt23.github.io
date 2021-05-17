@@ -96,6 +96,7 @@ Operating systems that already ship Calamares:
 - [BlackPanther OS](http://www.blackpantheros.eu/){:target="_blank"}
 - [Bluestar Linux](https://sourceforge.net/projects/bluestarlinux/){:target="_blank"}
 - [Chakra](https://chakralinux.org/){:target="_blank"}
+- [CyberOS](https://cyberos.github.io/){:target="_blank"}
 - [EndeavourOS](https://endeavouros.com/){:target="_blank"}
 - [Feren OS](https://ferenos.weebly.com/){:target="_blank"}
 - [GeckoLinux](http://geckolinux.github.io/){:target="_blank"}
