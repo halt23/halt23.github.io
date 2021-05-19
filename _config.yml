@@ -137,6 +137,12 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
+    - label: "IRC"
+      icon: "far fa-comment-alt"
+      url: "https://webchat.freenode.net/?randomnick=1&channels=%23calamares"
+    - label: "Matrix"
+      icon: "far fa-comments"
+      url: "https://webchat.kde.org/#/room/%23calamares:kde.org"
 
 
 # Reading Files
