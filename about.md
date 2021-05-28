@@ -120,6 +120,7 @@ Operating systems that already ship Calamares:
 - [Salient OS](https://salientos.github.io/){:target="_blank"}
 - [Siduction](https://siduction.org/){:target="_blank"}
 - [TeLOS Linux](https://teloslinux.org){:target="_blank"}
+- [XeroLinux](https://xerolinux.online){:target="_blank"}
 
 Operating systems that are evaluating Calamares in pre-release builds:
 
