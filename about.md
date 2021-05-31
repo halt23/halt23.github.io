@@ -99,6 +99,7 @@ Operating systems that already ship Calamares:
 - [Chakra](https://chakralinux.org/){:target="_blank"}
 - [EndeavourOS](https://endeavouros.com/){:target="_blank"}
 - [Feren OS](https://ferenos.weebly.com/){:target="_blank"}
+- [Garuda Linux](https://garudalinux.org/){:target="_blank"}
 - [GeckoLinux](http://geckolinux.github.io/){:target="_blank"}
 - [Hamara Linux](https://www.hamaralinux.org/){:target="_blank"}
 - [Kannolo](https://kannolo.sourceforge.io/){:target="_blank"} (Fedora Remix)
