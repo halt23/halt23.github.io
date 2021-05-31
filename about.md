@@ -150,7 +150,7 @@ For a complete list of dependencies, see
 ## Contact us
 {: .offset}
 
-- IRC: [#calamares](https://webchat.freenode.net/?channel=#calamares?nick=guest%7C){:target="_blank"} on webchat.freenode.net.  
+- IRC: [#calamares](https://kiwiirc.com/client/irc.libera.chat/#calamares){:target="_blank"} on libera.chat.  
 - Bugs: [Calamares issues, bugs and feature requests](https://github.com/calamares/calamares/issues){:target="_blank"}
 - GPG: Calamares release tarballs are signed with a [GPG signing-subkey](pk-7FEA3DA6169C77D6.txt):
   - Calamares 3.2.3 - 3.2.25, E7C31EAE243D798415BCEF00128F00873E05AF1D

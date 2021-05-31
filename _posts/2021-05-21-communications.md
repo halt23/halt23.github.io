@@ -25,8 +25,8 @@ is worth filing an issue for, notifications, and little things
 monitored with varying intensity by the Calamares team:
 
 - [Matrix via :kde.org](https://webchat.kde.org/#/room/%23calamares:kde.org) (link is to Element on KDE.org)
-- [IRC on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23calamares) (link is to Kiwi IRC on Freenode)
 - [IRC on Libera.chat](https://kiwiirc.com/client/irc.libera.chat/#calamares) (link is to Kiwi IRC connecting to Libera.chat)
+- [IRC on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23calamares) (link is to Kiwi IRC on Freenode)
 
 IRC is not persistent, so don't ask-and-leave in the channel because you
 will never get an answer. It does not require registration, though.

@@ -34,7 +34,7 @@ links:
   - title: "<i class='fas fa-globe fa-2x'></i> Translate"
     url: "https://www.transifex.com/calamares/calamares/"
   - title: "<i class='fas fa-comments fa-2x'></i> Talk"
-    url: "https://webchat.freenode.net/?channel=#calamares?nick=guest%7C"
+    url: "https://kiwiirc.com/client/irc.libera.chat/#calamares"
 
 # docs sidebar
 docs:
