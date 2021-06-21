@@ -25,6 +25,7 @@ The place where to report bugs, issues, errors or feature request:
 [**Calamares Issues**](https://github.com/calamares/calamares/issues){:target="_blank"}  
 
 ## Developers of Distrubutions
+{: .offset}
 
 If you are a developer of a distribution and are new to Calamares, make sure to thoroughly read the Wiki pages provided for you.  See the links on the left.  Reporting issues is for bugs, errors, issues you may have found, or adding a new feature request.  Issues are **NOT** a help channel.  If you have questions left after reading the Wiki, use the IRC channel to get help.
 
@@ -39,6 +40,7 @@ When reporting an issue or feature request, include as many of the following as 
 
 
 ## End Users
+{: .offset}
 
 Most of the time, Calamares issues is not the place for you to report issues, use the bug tracker of your distribution instead. Every distribution has their own implementation of Calamares and they can much better decide if the issue found is distribution specific or a general Calamares issue.
 
