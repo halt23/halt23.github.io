@@ -7,7 +7,7 @@ main:
   - title: "<i class='fab fa-github'></i> Code"
     url: "https://github.com/calamares/calamares"
   - title: "<i class='fas fa-bug'></i> Issues"
-    url: "https://github.com/calamares/calamares/issues"
+    url: /issues/
   - title: "<i class='fas fa-graduation-cap'></i> Wiki"
     url: "https://github.com/calamares/calamares/wiki"
   - title: "<i class='fas fa-book'></i> Guide"
