@@ -14,20 +14,33 @@ published: true
 # Trailing whitespace is important in this file!
 ---
 
-Getting bugs fixed is an important, if not crucial part of the quality assurance for any project. To be able to solve any issue stands and falls with how a bug report is created.  When reporting try to include:
+Getting bugs fixed is an important, if not crucial part of the quality assurance for any project. To solve issues, the quality of bug reports is important.  When reporting try to include:
 
 * Name of Distribution used
+  * version of the Distribution
+  * if possible, link to the ISO file
+  * if it is your own distro, or doesn't have releases yet, put an ISO
+    up on a file-sharing site somewhere.
 * Version of Calamares used (released version or git build)
+  * the Calamares version can be seen in the log file, or in the *About* dialog
+    on the welcome page
+  * if possible, also the KPMCore version from your package manager.
 * Logs & Screenshots
-* Use the ISSUE_TEMPLATE provided for you when opening an issue
+  * The Calamares session log is placed in `~/.cache/calamares` and is called `session.log`.
+    It is placed in the home-directory of the user **running** Calamares, so
+    that may be the root user. If it is not detailed, add `-D6` to the
+    flags passed to Calamares (meaning "debug logging level 6", which is plenty).
+  * Screenshots can also be photos, if no suitable screenshot / internet connection is available.
+* Use the ISSUE_TEMPLATE provided for you when opening an issue.
 
 The place where to report bugs, issues, errors or feature request:  
-[**Calamares Issues**](https://github.com/calamares/calamares/issues){:target="_blank"}  
+[**Calamares Issues**](https://github.com/calamares/calamares/issues){:target="_blank"}   (On GitHub).
 
 ## Developers of Distrubutions
 {: .offset}
 
-If you are a developer of a distribution and are new to Calamares, make sure to thoroughly read the Wiki pages provided for you.  See the links on the left.  Reporting issues is for bugs, errors, issues you may have found, or adding a new feature request.  Issues are **NOT** a help channel.  If you have questions left after reading the Wiki, use the IRC channel to get help.
+If you are a developer of a distribution and are new to Calamares, make sure to thoroughly read the Wiki pages provided for you.  See the links on the left.  Reporting issues is for bugs, errors, issues you may have found, or adding a new feature request.  Issues are **NOT** a help channel.  If you have questions left after reading the Wiki,
+use the IRC or Matrix channel to get help.
 
 When reporting an issue or feature request, include as many of the following as possible (in addition to the info requested above):
 
@@ -42,7 +55,9 @@ When reporting an issue or feature request, include as many of the following as 
 ## End Users
 {: .offset}
 
-Most of the time, Calamares issues is not the place for you to report issues, use the bug tracker of your distribution instead. Every distribution has their own implementation of Calamares and they can much better decide if the issue found is distribution specific or a general Calamares issue.
+Most of the time, Calamares issues is not the place for you to report issues.
+Use the bug tracker of your distribution instead.
+Every distribution has their own implementation of Calamares and they can much better decide if the issue found is distribution specific or a general Calamares issue.
 
 If you decide it is a general Calamares issue, make sure to include all information requested in the first section.  In addition provide:
 
