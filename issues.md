@@ -36,7 +36,7 @@ Getting bugs fixed is an important, if not crucial part of the quality assurance
 The place where to report bugs, issues, errors or feature request:  
 [**Calamares Issues**](https://github.com/calamares/calamares/issues){:target="_blank"}   (On GitHub).
 
-## Developers of Distrubutions
+## Developers of Distributions
 {: .offset}
 
 If you are a developer of a distribution and are new to Calamares, make sure to thoroughly read the Wiki pages provided for you.  See the links on the left.  Reporting issues is for bugs, errors, issues you may have found, or adding a new feature request.  Issues are **NOT** a help channel.  If you have questions left after reading the Wiki,
