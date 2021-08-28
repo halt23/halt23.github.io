@@ -64,7 +64,7 @@ If you decide it is a general Calamares issue, make sure to include all informat
 * Is the issue related to a BIOS or UEFI system install?
 * Are you using a GPT or msdos partition table?
 * Try to find out from your distribution where they locate the installation.log and provide that log
-* Many time disk layout used is needed, provide the needed info with `sudo blkid` & `sudo fdisk -l`
+* Many time disk layout used is needed, provide the needed info with `sudo blkid` and `sudo fdisk -l`
 
 ---
 
