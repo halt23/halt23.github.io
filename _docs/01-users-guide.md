@@ -4,7 +4,7 @@ permalink: /docs/users-guide/
 header:
   overlay_color: "#000"
   overlay_filter: "0.8"
-  overlay_image: /images/banner.jpg
+  overlay_image: /images/banner.webp
 excerpt: "This guide explains what Calamares is capable of."
 last_modified_at: 2021-01-04
 toc: true

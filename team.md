@@ -4,7 +4,7 @@ title: The Calamares team
 header:
   overlay_color: "#000"
   overlay_filter: "0.8"
-  overlay_image: /images/banner.jpg
+  overlay_image: /images/banner.webp
 sidebar:
   nav: "links"
 permalink: /team/
@@ -48,7 +48,7 @@ Lubuntu support
 **Walter Lapchynski**
 Lubuntu support  
 
-User interface design and artwork is provided by [the KDE Visual Design Group](https://vdesign.kde.org/){:target="_blank"}.
+User interface design and artwork is provided by [the KDE Visual Design Group](https://community.kde.org/Get_Involved/design/){:target="_blank"}.
 
 **Find us on [GitHub](https://github.com/calamares/calamares/graphs/contributors).**
 
