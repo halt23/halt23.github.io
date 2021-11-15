@@ -59,7 +59,7 @@ in the build directory.
 
 <img src="/images/2021/xero-2.webp" alt="Xero Linux, installation going on" width=640 />
 
-## Testing on EndeavousOS
+## Testing on EndeavourOS
 
 Endeavour supports two kinds of installation: online and offline. The online
 installation offers package-selection and allows customizing the desktop environment,
