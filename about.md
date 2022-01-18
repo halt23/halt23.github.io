@@ -48,12 +48,12 @@ repository holds more branding examples and specialized modules.
 Calamares is not an installer for any specific Linux distribution.
 It is **used** by Manjaro and KaOS and Maui and Netrunner Linux,
 but it isn't "the Manjaro installer".
-Calamares is an independent product. 
-The Calamares team works closely with Linux distributors to provide the 
+Calamares is an independent product.
+The Calamares team works closely with Linux distributors to provide the
 very best experience to their users.
 
-Calamares does not aim to be the ultimate "standard" installer of the Linux 
-desktop. Many distributions already have more mature system installer 
+Calamares does not aim to be the ultimate "standard" installer of the Linux
+desktop. Many distributions already have more mature system installer
 solutions, but some don't, and that's where Calamares can be of use.
 A herd of Arch derivatives uses Calamares, as does a family of Debian and
 Ubuntu spins, Fedora remixes and openSUSE flavors.
@@ -138,22 +138,23 @@ Operating systems that ship Calamares in their package repositories for third-pa
 ## What is Calamares made of
 {: .offset}
 
-Calamares is mostly written in C++17, with Qt 5 (5.9 or later) as general 
+Calamares is mostly written in C++17, with Qt 5 (5.9 or later) as general
 purpose library and UI toolkit.
 
-Calamares is modular by design, and Python 3 was chosen as the main 
-scripting language. The Python 3 interface is implemented with Boost.Python, 
+Calamares is modular by design, and Python 3 was chosen as the main
+scripting language. The Python 3 interface is implemented with Boost.Python,
 and all Calamares configuration is done in YAML.
 
-For a complete list of dependencies, see 
+For a complete list of dependencies, see
 [the README file](https://github.com/calamares/calamares/blob/calamares/README.md){:target="_blank"}.
 
 ## Contact us
 {: .offset}
 
-- IRC: [#calamares](https://kiwiirc.com/client/irc.libera.chat/#calamares){:target="_blank"} on libera.chat.  
+- IRC: [#calamares](https://kiwiirc.com/client/irc.libera.chat/#calamares){:target="_blank"} on libera.chat.
 - Bugs: [Calamares issues, bugs and feature requests](https://github.com/calamares/calamares/issues){:target="_blank"}
 - GPG: Calamares release tarballs are signed with a [GPG signing-subkey](pk-7FEA3DA6169C77D6.txt):
   - Calamares 3.2.3 - 3.2.25, E7C31EAE243D798415BCEF00128F00873E05AF1D
   - Calamares 3.2.26, 57E14BD1CD6C198BC11BF18D61A7D26277E4D0DB (one release only!)
-  - Since Calamares 3.2.27, 86B8EDB6ED8E3F96A9BAECB5CFDDC96F12B1915C (**current**)
+  - Calamares 3.2.27 - 3.2.49.1, 86B8EDB6ED8E3F96A9BAECB5CFDDC96F12B1915C
+  - Calamares 3.2.50 - (**current**), 4947400F3746A038900BB178328D742D8807A435
