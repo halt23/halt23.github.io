@@ -11,7 +11,7 @@ Using the correct partition setup, most suitable filesystem and partition-table 
 Make sure to back­up any data you might need from your drive before proceeding.
 {: .notice--danger}
 
-If your target install medium (HDD, ssd, usb-stick as examples), is not formatted and partitioned or not set up to your liking, you can do so from within the Installer.
+If your target install medium (HDD, ssd, usb-stick as examples), is not formatted and partitioned or not set up to your liking, you can do so from within the Installer. If the target medium isn't visible, see the [troubleshooting](#troubleshooting) section below.
 {: .notice--info}
 For both UEFI and BIOS systems, hovering over the respective info buttons will give you some more information for the different options for each.
 {: .notice--info}
@@ -58,3 +58,18 @@ Highlight `Free Space` and select `Create`.  You then get a window with options 
 **Adjust Drive** Using the fourth option to adjust existing layout. Select `New Partition Table` for a new drive or to switch from ms-dos to GPT or vice versa.  
 Highlight a desired partition, and select `Format`. If this is going to be the root partition, it needs to be formatted. If old files are still present it will most likely result in a broken install. Next select a Mountpoint, root needs to be set, for UEFI install /boot needs to be set too. Repeat these steps for any other partition you want to use for this install. Once root is set, the Next button will become active again. Options are available to encrypt partitions, this includes swap.
 {: .notice--info}
+
+
+### Troubleshooting
+
+**My disk isn't visible!** If you cannot select the disk you have in mind -- if the disk is
+not in the drop-down list of devices -- then Calamares has *some* reason not to want to
+install on it. Perhaps you have mounted the device (to browse files on it, for instance).
+Umount the device. Some systems are very agressive about using all available disks
+for swap. Turn swap off. Calamares tries to do that for you, but might not succeed.
+
+Some disks look like CD-ROMs to Calamares. It will not offer CD-ROMs as an installation
+target -- even if you know it's a USB stick or an eMMC drive. You can check with
+`blkid -s TYPE -o value /dev/disk` (where `/dev/disk` should be the Linux
+name of the device you intend to use, like `/dev/mmcblk0`). If it says *iso9660* then
+you'll need to manually edit the disk first.
