@@ -17,7 +17,7 @@ locale                   : "en-US"
 title                    : "Calamares"
 title_separator          : "-"
 subtitle                 : "The universal installer framework"
-name                     : "Your Name"
+name                     : "Calamares"
 description              : "The idea of Calamares arose from a desire of several independent Linux distributions to come together and work on a shared system installer. Instead of everyone working on their own implementation and forking forks of forks, why not work together on something that can be used by many?"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -91,10 +91,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             :
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              :
+  location         :
   email            :
   links:
     - label: "Email"
