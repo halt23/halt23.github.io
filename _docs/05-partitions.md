@@ -23,7 +23,7 @@ This installer gives you four options to use.
 
 Automated options:
  1. Shrink an existing partition and install alongside any other OS already available on your system, using a filesystem selected as default by your distribution.
- 2. Use an existing partition and it will replace all files and/or OS on that partition with a new install, using a filesystem selected as default by your distribution.
+ 2. Choose an existing partition to be replaced with a new installation using the same filesystem type already present on the partition.
  3. Use the entire disk and will create one partition where all will be installed under root, all other partitions will be removed and the filesystem used will be the default set by your distribution.
  
 Manual options:
