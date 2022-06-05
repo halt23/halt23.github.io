@@ -110,6 +110,7 @@ Operating systems that already ship Calamares:
 - [Manjaro](http://manjaro.org/){:target="_blank"}
 - [Neptune](https://neptuneos.com/en/start-page.html){:target="_blank"}
 - [Netrunner](http://www.netrunner.com/){:target="_blank"}
+- [NixOS](https://nixos.org/){:target="_blank"}
 - [OpenMamba](http://openmamba.org/en/){:target="_blank"}
 - [OpenMandriva](https://www.openmandriva.org/){:target="_blank"}
 - [Parabola](https://www.parabola.nu/){:target="_blank"}
