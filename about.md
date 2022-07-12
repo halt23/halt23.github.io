@@ -88,24 +88,19 @@ Many Linux distributions are in varying stages of adopting Calamares as their pr
 Operating systems that already ship Calamares:
 
 - [AIMS Desktop](https://desktop.aims.ac.za/){:target="_blank"}
-- [Apricity OS](http://www.apricityos.com/){:target="_blank"}
 - [Archcraft](https://archcraft-os.github.io/){:target="_blank"}
 - [Archman Linux](https://archman.org/){:target="_blank"}
 - [ArcoLinux](https://arcolinux.info){:target="_blank"}
 - [Argent Linux](https://rogentos.ro/#Portfolio){:target="_blank"}
 - [BBQLinux](http://bbqlinux.org/){:target="_blank"}
-- [BlackPanther OS](http://www.blackpantheros.eu/){:target="_blank"}
 - [Bluestar Linux](https://sourceforge.net/projects/bluestarlinux/){:target="_blank"}
-- [Chakra](https://chakralinux.org/){:target="_blank"}
 - [EndeavourOS](https://endeavouros.com/){:target="_blank"}
 - [Feren OS](https://ferenos.weebly.com/){:target="_blank"}
 - [Garuda Linux](https://garudalinux.org/){:target="_blank"}
 - [GeckoLinux](http://geckolinux.github.io/){:target="_blank"}
-- [Hamara Linux](https://www.hamaralinux.org/){:target="_blank"}
 - [Kannolo](https://kannolo.sourceforge.io/){:target="_blank"} (Fedora Remix)
 - [KaOS](http://kaosx.us/){:target="_blank"}
 - [KDE Neon](https://neon.kde.org/){:target="_blank"}
-- [Laxer OS](https://www.laxeros.com/){:target="_blank"}
 - [Lubuntu](http://lubuntu.me/){:target="_blank"}
 - [Manjaro](http://manjaro.org/){:target="_blank"}
 - [Neptune](https://neptuneos.com/en/start-page.html){:target="_blank"}
@@ -126,7 +121,6 @@ Operating systems that already ship Calamares:
 Operating systems that are evaluating Calamares in pre-release builds:
 
 - [Frugalware](https://frugalware.org/){:target="_blank"}
-- [Maui](http://www.maui-project.org/){:target="_blank"}
 - [PCLinuxOS](http://www.pclinuxos.com/){:target="_blank"}
 
 Operating systems that ship Calamares in their package repositories for third-party derivatives to use:
