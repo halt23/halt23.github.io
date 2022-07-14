@@ -92,6 +92,7 @@ Operating systems that already ship Calamares:
 - [Archman Linux](https://archman.org/){:target="_blank"}
 - [ArcoLinux](https://arcolinux.info){:target="_blank"}
 - [Argent Linux](https://rogentos.ro/#Portfolio){:target="_blank"}
+- [Athena OS](https://github.com/Athena-OS/athena-iso){:target="_blank"}
 - [BBQLinux](http://bbqlinux.org/){:target="_blank"}
 - [Bluestar Linux](https://sourceforge.net/projects/bluestarlinux/){:target="_blank"}
 - [EndeavourOS](https://endeavouros.com/){:target="_blank"}
