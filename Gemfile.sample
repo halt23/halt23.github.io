@@ -1,0 +1,25 @@
+#   SPDX-License-Identifier: CC0-1.0
+#   SPDX-FileCopyrightText: no
+
+# This is the configuration of Jekyll that can be used
+# to show a local version of the website. Copy (or rename)
+# this file to `Gemfile` and then run bundler and jekyll:
+#
+# ```
+#       cp Gemfile.sample Gemfile
+#       bundler install
+#       bundler exec jekyll serve
+# ```
+
+source "https://rubygems.org"
+ruby RUBY_VERSION
+
+gem "jekyll"
+gem 'jekyll-feed'
+gem "jekyll-sitemap"
+gem "jekyll-paginate"
+gem "jekyll-gist"
+gem "jekyll-include-cache"
+gem 'minima'
+gem 'webrick'
+
