@@ -20,7 +20,7 @@ gallery:
     title: "Locale Screen"
   - url: /images/gallery/page-partition.png
     image_path: /images/gallery/page-partition-th.png
-    alt: "Parttioning Screen"
+    alt: "Partitioning Screen"
     title: "Partitioning Screen"
 permalink: /about/
 published: true
