@@ -96,6 +96,7 @@ Operating systems that already ship Calamares:
 - [BBQLinux](http://bbqlinux.org/){:target="_blank"}
 - [Bluestar Linux](https://sourceforge.net/projects/bluestarlinux/){:target="_blank"}
 - [EndeavourOS](https://endeavouros.com/){:target="_blank"}
+- [Escuelas LINUX](http://escuelaslinux.osdn.jp/index.html){:target="_blank"}
 - [Feren OS](https://ferenos.weebly.com/){:target="_blank"}
 - [Garuda Linux](https://garudalinux.org/){:target="_blank"}
 - [GeckoLinux](http://geckolinux.github.io/){:target="_blank"}
