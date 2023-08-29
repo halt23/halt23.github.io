@@ -137,9 +137,6 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url:
-    - label: "IRC"
-      icon: "far fa-comment-alt"
-      url: "https://kiwiirc.com/client/irc.libera.chat/#calamares"
     - label: "Matrix"
       icon: "far fa-comments"
       url: "https://webchat.kde.org/#/room/%23calamares:kde.org"
