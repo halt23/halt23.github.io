@@ -40,7 +40,7 @@ The place where to report bugs, issues, errors or feature request:
 {: .offset}
 
 If you are a developer of a distribution and are new to Calamares, make sure to thoroughly read the Wiki pages provided for you.  See the links on the left.  Reporting issues is for bugs, errors, issues you may have found, or adding a new feature request.  Issues are **NOT** a help channel.  If you have questions left after reading the Wiki,
-use the IRC or Matrix channel to get help.
+use the Matrix channel to get help.
 
 When reporting an issue or feature request, include as many of the following as possible (in addition to the info requested above):
 
