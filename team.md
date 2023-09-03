@@ -13,7 +13,10 @@ published: true
 ---
 
 [**Adriaan de Groot**](https://github.com/adriaandegroot){:target="_blank"}  
-Maintainer [GPG Key](pk-7FEA3DA6169C77D6.txt) | Software developer for Blue Systems
+Maintainer [GPG Key](pk-7FEA3DA6169C77D6.txt) | Software developer
+**Anke Boersma**  
+**Evan James**  
+
 
 ## Contributors
 
@@ -63,4 +66,4 @@ Previous Maintainer
 
 ---
 
-Calamares development is sponsored by [Blue Systems](https://www.blue-systems.com/){:target="_blank"}.
+Calamares is a community project.

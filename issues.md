@@ -68,4 +68,4 @@ If you decide it is a general Calamares issue, make sure to include all informat
 
 ---
 
-Calamares development is sponsored by [Blue Systems](https://www.blue-systems.com/){:target="_blank"}.
+Calamares is a community project.

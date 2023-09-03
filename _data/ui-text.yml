@@ -30,7 +30,7 @@ en: &DEFAULT_EN
   follow_label               : "Follow:"
   feed_label                 : "Feed"
   powered_by                 : "All trademarks and registered trademarks are the property of their respective owners.
-Calamares is a project sponsored by "
+Calamares is a community project."
   website_label              : "Website"
   email_label                : "Email"
   recent_posts               : "Recent posts"
