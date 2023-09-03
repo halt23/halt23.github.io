@@ -13,7 +13,7 @@ published: true
 ---
 
 [**Adriaan de Groot**](https://github.com/adriaandegroot){:target="_blank"}  
-Maintainer [GPG Key](pk-7FEA3DA6169C77D6.txt) | Software developer
+Maintainer [GPG Key](pk-7FEA3DA6169C77D6.txt) | Software developer  
 **Anke Boersma**  
 **Evan James**  
 
