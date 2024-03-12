@@ -14,7 +14,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Calamares"
+title                    : "DebWork"
 title_separator          : "-"
 subtitle                 : "The universal installer framework"
 name                     : "Calamares"
