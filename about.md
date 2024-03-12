@@ -36,6 +36,13 @@ Calamares is an installer framework. By design it is very customizable, in order
 
 Calamares aims to be easy, usable, beautiful, pragmatic, inclusive and distribution-agnostic.
 
+Of course we can write code:
+```
+var add2 = function(number) {
+  return number + 2;
+}
+```
+
 Calamares includes an advanced partitioning feature, with support for both manual and automated partitioning operations. It is the first installer with an automated "Replace Partition" option, which makes it easy to reuse a partition over and over for distribution testing.
 
 Got a Linux distribution but no system installer? [Grab Calamares](https://github.com/calamares/calamares){:target="_blank"}, mix and match any number of [Calamares modules](https://github.com/calamares/calamares/tree/calamares/src/modules){:target="_blank"} (or write your own in Python or C++), throw together some [branding](https://github.com/calamares/calamares/tree/calamares/src/branding){:target="_blank"}, package it up and you are ready to ship!
